@@ -16,3 +16,19 @@
 10. смерть/разрушение
 11. ИИ(потом)
 12. область видимости ИИ
+
+### Примечания по установке
+
+Для того, что бы подключить библиотеку к проекту:
+В CMake фйле вручную добавляем пути до .h
+```
+include_directories(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include)
+```
+библиотеки линкуются компилятором при опции -l, примерно так. 
+$ g++ 1.cpp -lm libm.so -L~/usr/lib -luserlib libuserlib.so
+
+В CMake фйле для этого есть спечиальная команда
+```
+link_libraries(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/lib)
+```
+Естественно, надо заменить путь на свой.
