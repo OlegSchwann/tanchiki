@@ -23,12 +23,13 @@
 В CMake фйле вручную добавляем пути до .h
 ```
 include_directories(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include)
+link_libraries(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/lib)
 ```
 библиотеки линкуются компилятором при опции -l, примерно так. 
 $ g++ 1.cpp -lm libm.so -L~/usr/lib -luserlib libuserlib.so
 
 В CMake фйле для этого есть спечиальная команда
 ```
-link_libraries(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/lib)
+target_link_libraries(simple_RTS sfml-system sfml-graphics sfml-window)
 ```
 Естественно, надо заменить путь на свой.
