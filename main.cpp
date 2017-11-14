@@ -1,15 +1,37 @@
-#include <iostream>
 #include <SFML/Network.hpp>
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#define PORT 2000
 
 using namespace sf;
 
 int main()
-{
-    std::string hostname = "mrfalcon-Lenovo-G505s";
+{   IpAddress ip = IpAddress::getLocalAddress();
     TcpSocket socket;
-    socket.connect(hostname, 2000);
+    Packet packet;
+    TcpListener listener;
+    listener.listen(PORT);
+    listener.accept(socket);
     char data[20];
-    std::cin >> data;
-    socket.send(data, sizeof(data));
+    size_t received;
+    socket.receive(data, sizeof(data), received);
+    Font font;
+    font.loadFromFile("/home/mrfalcon/CLionProjects/Dandy_Tanks/arial.ttf");
+    Text text(data, font, 20);
+    RenderWindow window(VideoMode(200, 200), "nettest");
+    while(window.isOpen())
+    {
+        Event event;
+        while(window.pollEvent(event))
+        {
+            if(event.type == Event::Closed)
+                window.close();
+        }
+
+        window.clear();
+        window.draw(text);
+        window.display();
+    }
     return 0;
 }
+
