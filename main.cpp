@@ -1,24 +1,12 @@
-#include <SFML/Network.hpp>
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#define PORT 2000
+#include "player.h"
 
 using namespace sf;
 
 int main()
-{   IpAddress ip = IpAddress::getLocalAddress();
-    TcpSocket socket;
-    Packet packet;
-    TcpListener listener;
-    listener.listen(PORT);
-    listener.accept(socket);
-    char data[20];
-    size_t received;
-    socket.receive(data, sizeof(data), received);
-    Font font;
-    font.loadFromFile("/home/mrfalcon/CLionProjects/Dandy_Tanks/arial.ttf");
-    Text text(data, font, 20);
-    RenderWindow window(VideoMode(200, 200), "nettest");
+{
+    RenderWindow window(VideoMode(800, 800), "player");
+    player player1;
     while(window.isOpen())
     {
         Event event;
@@ -28,10 +16,18 @@ int main()
                 window.close();
         }
 
+        if(Keyboard::isKeyPressed(Keyboard::S))
+            player1.move(DOWN);
+        else if(Keyboard::isKeyPressed(Keyboard::D))
+            player1.move(RIGHT);
+        else if(Keyboard::isKeyPressed(Keyboard::W))
+            player1.move(UP);
+        else if(Keyboard::isKeyPressed(Keyboard::A))
+            player1.move(LEFT);
+
         window.clear();
-        window.draw(text);
+        window.draw(player1.get_texture());
         window.display();
     }
     return 0;
 }
-
