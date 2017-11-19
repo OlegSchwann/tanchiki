@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="simple_RTS" targetName="simple_RTS" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d684f008-61c7-4661-9275-07ac1c2b4a24" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio-d.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio-d.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio-d.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio-s-d.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio-s.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-audio.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics-d.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics-d.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics-d.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics-s-d.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics-s.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-graphics.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network-d.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network-d.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network-d.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network-s-d.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network-s.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-network.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system-d.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system-d.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system-d.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system-s-d.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system-s.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-system.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window-d.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window-d.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window-d.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window-s-d.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window-s.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window.so.2.4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/lib/libsfml-window.so.2.4.2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/X11/X11" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/X11/X11-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/ftp/ftp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/ftp/ftp-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/opengl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/opengl-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/resources/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/resources/sansation.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/resources/texture.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/pong/pong" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/pong/pong-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/pong/resources/ball.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/pong/resources/sansation.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/devices.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/sansation.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/sfml.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/text-background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/shader-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sockets/sockets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sockets/sockets-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound-capture/sound-capture" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound-capture/sound-capture-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/resources/canary.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/resources/ding.flac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/resources/orchestral.ogg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/sound" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/sound-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/voip/voip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/voip/voip-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/window/window" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/window/window-d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/main.cpp.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/simple_RTS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/simple_RTS.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/AlResource.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/Export.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/InputSoundFile.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/Listener.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/Music.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/OutputSoundFile.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/Sound.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundBuffer.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundBufferRecorder.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundFileFactory.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundFileFactory.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundFileReader.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundFileWriter.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundRecorder.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundSource.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Audio/SoundStream.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Config.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/BlendMode.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Color.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/ConvexShape.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Drawable.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Export.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Font.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Glsl.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Glsl.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Glyph.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Image.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/PrimitiveType.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Rect.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Rect.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/RectangleShape.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/RenderStates.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/RenderTarget.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/RenderTexture.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/RenderWindow.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Shader.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Shape.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Sprite.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Text.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Texture.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Transform.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Transformable.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Vertex.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/VertexArray.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/View.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Main.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/Export.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/Ftp.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/Http.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/IpAddress.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/Packet.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/Socket.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/SocketHandle.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/SocketSelector.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/TcpListener.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/TcpSocket.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Network/UdpSocket.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/OpenGL.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Clock.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Err.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Export.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/FileInputStream.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/InputStream.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Lock.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/MemoryInputStream.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Mutex.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/NativeActivity.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/NonCopyable.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Sleep.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/String.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/String.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Thread.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Thread.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/ThreadLocal.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/ThreadLocalPtr.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/ThreadLocalPtr.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Time.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Utf.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Utf.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector2.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector2.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector3.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector3.inl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Context.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/ContextSettings.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Event.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Export.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/GlResource.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Joystick.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Keyboard.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Mouse.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Sensor.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Touch.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/VideoMode.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/Window.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/WindowHandle.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/include/SFML/Window/WindowStyle.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/cmake/Modules/FindSFML.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/X11/X11.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/ftp/Ftp.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/opengl/OpenGL.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/pong/Pong.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/Effect.hpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/Shader.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/billboard.frag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/billboard.geom" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/billboard.vert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/blink.frag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/blur.frag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/edge.frag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/pixelate.frag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/storm.vert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/shader/resources/wave.vert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sockets/Sockets.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sockets/TCP.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sockets/UDP.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound-capture/SoundCapture.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/sound/Sound.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/voip/Client.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/voip/Server.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/voip/VoIP.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/examples/window/Window.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SFML-2.4.2/share/SFML/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/CXX.includecache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/DependInfo.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/build.make" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/cmake_clean.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/depend.internal" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/depend.make" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/flags.make" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/link.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_RTS.dir/progress.make" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/simple_RTS.cbp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client.cpp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-202">
+              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+              <folding>
+                <element signature="e#550#578#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pos</find>
+      <find>=</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Game.h" />
+        <option value="$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Time.hpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="simple_RTS" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="simple_RTS" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.simple_RTS">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="simple_RTS" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="simple_RTS" TARGET_NAME="simple_RTS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="simple_RTS" RUN_TARGET_NAME="simple_RTS">
+      <envs />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.simple_RTS" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d684f008-61c7-4661-9275-07ac1c2b4a24" name="Default" comment="" />
+      <created>1510000404409</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1510000404409</updated>
+      <workItem from="1510000406120" duration="1635000" />
+      <workItem from="1510075361237" duration="1072000" />
+      <workItem from="1510085982571" duration="1326000" />
+      <workItem from="1510328226323" duration="3073000" />
+      <workItem from="1510673142181" duration="64000" />
+      <workItem from="1510673812034" duration="29000" />
+      <workItem from="1510673863774" duration="120000" />
+      <workItem from="1510674003785" duration="240000" />
+      <workItem from="1510674259455" duration="4603000" />
+      <workItem from="1511003414088" duration="11560000" />
+      <workItem from="1511088129414" duration="2400000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="26703000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1920" height="1084" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2943723" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77903044" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59751976" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35174745" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Transformable.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector2.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/SFML-2.4.2/include/SFML/Graphics.hpp" />
+    <entry file="file:///usr/include/errno.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/SFML/Window.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/SFML/Window/Context.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/rdma/ib_user_sa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/asoundlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/alsa/asoundlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/sys/poll.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+    <entry file="file:///usr/include/SFML/Graphics.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics/Transformable.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Vector2.hpp" />
+    <entry file="file://$PROJECT_DIR$/Game.h" />
+    <entry file="file://$PROJECT_DIR$/Game.cpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Clock.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Sleep.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/Time.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/System/String.hpp" />
+    <entry file="file://$PROJECT_DIR$/SFML-2.4.2/include/SFML/Graphics.hpp" />
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#550#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
