@@ -42,19 +42,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -E remove -f
+RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oleg/CLionProject/simple_RTS
+CMAKE_SOURCE_DIR = /home/oleg/CLionProject/simple_RTS_рисующее
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -73,7 +73,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles /home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -126,6 +126,87 @@ simple_RTS/fast:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/build
 .PHONY : simple_RTS/fast
 
+AbstractScene.o: AbstractScene.cpp.o
+
+.PHONY : AbstractScene.o
+
+# target to build an object file
+AbstractScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o
+.PHONY : AbstractScene.cpp.o
+
+AbstractScene.i: AbstractScene.cpp.i
+
+.PHONY : AbstractScene.i
+
+# target to preprocess a source file
+AbstractScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AbstractScene.cpp.i
+.PHONY : AbstractScene.cpp.i
+
+AbstractScene.s: AbstractScene.cpp.s
+
+.PHONY : AbstractScene.s
+
+# target to generate assembly for a file
+AbstractScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AbstractScene.cpp.s
+.PHONY : AbstractScene.cpp.s
+
+DrawScene.o: DrawScene.cpp.o
+
+.PHONY : DrawScene.o
+
+# target to build an object file
+DrawScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/DrawScene.cpp.o
+.PHONY : DrawScene.cpp.o
+
+DrawScene.i: DrawScene.cpp.i
+
+.PHONY : DrawScene.i
+
+# target to preprocess a source file
+DrawScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/DrawScene.cpp.i
+.PHONY : DrawScene.cpp.i
+
+DrawScene.s: DrawScene.cpp.s
+
+.PHONY : DrawScene.s
+
+# target to generate assembly for a file
+DrawScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/DrawScene.cpp.s
+.PHONY : DrawScene.cpp.s
+
+InterfaseScene.o: InterfaseScene.cpp.o
+
+.PHONY : InterfaseScene.o
+
+# target to build an object file
+InterfaseScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o
+.PHONY : InterfaseScene.cpp.o
+
+InterfaseScene.i: InterfaseScene.cpp.i
+
+.PHONY : InterfaseScene.i
+
+# target to preprocess a source file
+InterfaseScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.i
+.PHONY : InterfaseScene.cpp.i
+
+InterfaseScene.s: InterfaseScene.cpp.s
+
+.PHONY : InterfaseScene.s
+
+# target to generate assembly for a file
+InterfaseScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.s
+.PHONY : InterfaseScene.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -162,6 +243,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simple_RTS"
+	@echo "... AbstractScene.o"
+	@echo "... AbstractScene.i"
+	@echo "... AbstractScene.s"
+	@echo "... DrawScene.o"
+	@echo "... DrawScene.i"
+	@echo "... DrawScene.s"
+	@echo "... InterfaseScene.o"
+	@echo "... InterfaseScene.i"
+	@echo "... InterfaseScene.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

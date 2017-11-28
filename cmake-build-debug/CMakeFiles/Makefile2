@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -E remove -f
+RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oleg/CLionProject/simple_RTS
+CMAKE_SOURCE_DIR = /home/oleg/CLionProject/simple_RTS_рисующее
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/simple_RTS.dir
@@ -69,7 +69,7 @@ CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS/cmake-build-debug
 CMakeFiles/simple_RTS.dir/all:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/depend
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target simple_RTS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target simple_RTS"
 .PHONY : CMakeFiles/simple_RTS.dir/all
 
 # Include target in all.
@@ -79,9 +79,9 @@ all: CMakeFiles/simple_RTS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/simple_RTS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simple_RTS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/simple_RTS.dir/rule
 
 # Convenience name for target.

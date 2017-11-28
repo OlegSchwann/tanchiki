@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/simple_RTS.dir/main.cpp.o  -o simple_RTS -lsfml-system -lsfml-graphics -lsfml-window 
+/usr/bin/c++  -g   CMakeFiles/simple_RTS.dir/main.cpp.o CMakeFiles/simple_RTS.dir/DrawScene.cpp.o CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o  -o simple_RTS -lsfml-system -lsfml-graphics -lsfml-window 

@@ -11,6 +11,6 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include)
 link_libraries(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/lib)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp DrawScene.cpp DrawScene.h AbstractScene.cpp AbstractScene.h InterfaseScene.cpp InterfaseScene.h)
 add_executable(simple_RTS ${SOURCE_FILES})
 target_link_libraries(simple_RTS sfml-system sfml-graphics sfml-window)
