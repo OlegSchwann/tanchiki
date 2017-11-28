@@ -80,6 +80,7 @@ CMakeFiles/simple_RTS.dir/DrawScene.cpp.o
  /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Window.hpp
  /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/WindowHandle.hpp
  /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/WindowStyle.hpp
+ /home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
  /home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.cpp
  /home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.h
  /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h

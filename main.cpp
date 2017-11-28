@@ -35,21 +35,25 @@ using namespace std;
 
 int main()
 {
+
     AbstractScene abstract_scene;
     fstream file("1.txt");
     abstract_scene.load_map(file);
     file.close();
 
+    DrawScene draw_scene;
+    //забирает измемения из абстрактной сцены
+
+    //задача 1 нарисовать стенку
+    abstract_scene.add_obj(30, 25, "Tank");
+    draw_scene.synchronize(&abstract_scene);
+
     // все подготовительные действия
     // минимальная длительность игрового цикла
     sf::Time cycle_time = sf::seconds(1);//0.02f);
-    sf::RenderWindow window(sf::VideoMode(480, 416), "simple rts");
+    sf::RenderWindow window(sf::VideoMode(624, 624), "simple rts");
 
-    DrawScene draw_scene;
-//    AbstractScene abstract_scene;
 
-    //задача 1 нарисовать стенку
-    draw_scene.add_obj(1, "DistrBlock");
 
     sf::Clock clock;
     sf::Event event;
@@ -63,10 +67,12 @@ int main()
                 window.close();
         }
         window.clear();
-        draw_scene.draw(window);//выводим все спрайты на экран
+        //выводим все спрайты на экран
+        //пришлось дать знать рисующей сцене о абстрактной сцене. Это нужно, что бы получать х, y отображения этого объекта.
+        draw_scene.draw(window, &abstract_scene);
         window.display();
         sf::Time elapsed_time = clock.getElapsedTime() % cycle_time;
-        std::cout << elapsed_time.asMicroseconds() << std::endl;
+        std::cout << "отрисовано за " << elapsed_time.asMilliseconds() << " миллисекунд\n";
         sf::sleep(cycle_time - elapsed_time);
     }
 

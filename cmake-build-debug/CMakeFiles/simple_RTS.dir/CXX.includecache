@@ -675,6 +675,8 @@ unordered_map
 -
 InterfaseScene.h
 /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+AbstractScene.h
+/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
 
 /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.cpp
 InterfaseScene.h

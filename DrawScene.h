@@ -9,6 +9,7 @@
 #include <iostream>
 #include <unordered_map>
 #include "InterfaseScene.h"
+#include "AbstractScene.h"
 
 #define DOWN 0
 #define RIGHT 1
@@ -21,7 +22,7 @@ class DrawObject: public InterfaseObject{
 public:
     DrawObject(int id, sf::Sprite * sprite):InterfaseObject(id), sprite(sprite){};
     sf::Sprite * sprite = NULL; // основной рисуемый объект
-    virtual void draw(sf::RenderWindow &window) = 0; //сам объект не имеет смысла, это интерфейс.
+    virtual void draw(sf::RenderWindow &window, AbstractScene *abstract_scene) = 0; //сам объект не имеет смысла, это интерфейс.
     ~DrawObject(){
         // все картинки инициализируются и хранятся в сцене, и в ней же уничтожаются в деструкторе, что бы избежать дублирования.
     };
@@ -32,15 +33,40 @@ class DrawBlock: public DrawObject{
 public:
     DrawBlock(const int id, sf::Sprite * sprite) : DrawObject(id, sprite){};
     ~DrawBlock(){};
-    void draw(sf::RenderWindow &window){
-        //получение объекта из абстрактной сцены
-        int x = 10;
-        int y = 20;
-        sprite->setPosition(x, y);
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
+        Point point = abstract_scene->Get_point(id);
+        sprite->setPosition(point.x, point.y);
         window.draw(*sprite);
     }
 };
 
+//штаб
+class DrawHeadquarters: public DrawObject{
+public:
+    DrawHeadquarters(int id, sf::Sprite *living_headquarters_sprite,
+        sf::Sprite *dead_headquarters_sprite):
+        DrawObject(id, living_headquarters_sprite),
+        living_headquarters_sprite(living_headquarters_sprite),
+        dead_headquarters_sprite(dead_headquarters_sprite){};
+    ~DrawHeadquarters(){};
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
+        Point point = abstract_scene->Get_point(id);
+        sprite->setPosition(point.x, point.y);
+        AbstractObject * abstract_object = abstract_scene->obj_list[id];
+        AbstractHeadquarters *abstract_headquarters = dynamic_cast<AbstractHeadquarters *>(abstract_object);
+        bool is_alive = abstract_headquarters->is_alive; // Мы с самог начала думали об этом, когда разделили на сцены
+        if(is_alive){
+            sprite = living_headquarters_sprite;
+        } else {
+            sprite = dead_headquarters_sprite;
+        }
+        window.draw(*sprite);
+    }
+
+private:
+    sf::Sprite *living_headquarters_sprite;
+    sf::Sprite *dead_headquarters_sprite;
+};
 class DrawBullet: public DrawObject{
 public:
     DrawBullet(
@@ -55,11 +81,12 @@ public:
         this->right_sprite = right_sprite;
         this->left_sprite = left_sprite;
     };
-    void draw(sf::RenderWindow &window){
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
         //получаем направление
-        //как обратится к отображению этого объекта в абстрактной сцене?
-        //int direction = AbstractScene.object_list[id].get_dir();
-        int direction = RIGHT;
+        //обращаясь к отображению этого объекта в абстрактной сцене.
+        AbstractObject * abstract_object = abstract_scene->obj_list[id];
+        AbstrBullet *abstr_bullet = dynamic_cast<AbstrBullet *>(abstract_object);
+        int direction = abstr_bullet->get_dir(); // Мы с самог начала думали об этом, когда разделили на сцены
         switch(direction) {
             case DOWN:
                 sprite = down_sprite;
@@ -74,6 +101,8 @@ public:
                 sprite = left_sprite;
                 break;
         }
+        Point point = abstract_scene->Get_point(id);
+        sprite->setPosition(point.x, point.y);
         window.draw(*sprite);
     };
 private:
@@ -101,11 +130,12 @@ public:
     ~DrawTank(){
         // все картинки инициализируются и хранятся в сцене, и в ней же уничтожаются, что бы избежать дублирования.
     };
-    void draw(sf::RenderWindow &window){
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
         //получаем направление
-        //как обратится к отображению этого объекта в абстрактной сцене?
-        //int direction = AbstractScene.object_list[id].get_dir();
-        int direction = RIGHT;
+        //обращаясь к отображению этого объекта в абстрактной сцене.
+        AbstractObject * abstract_object = abstract_scene->obj_list[id];
+        AbstrTank *abstr_tank = dynamic_cast<AbstrTank *>(abstract_object);
+        int direction = abstr_tank->get_dir(); // Мы с самог начала думали об этом, когда разделили на сцены
 
         switch(direction) {
             case DOWN:
@@ -121,6 +151,8 @@ public:
                 sprite = left_sprite;
                 break;
         }
+        Point point = abstract_scene->Get_point(id);
+        sprite->setPosition(point.x, point.y);
         window.draw(*sprite);
     };
 private:
@@ -144,7 +176,7 @@ public:
             explosion_3(explosion_3),
             phase(0){
     };
-    void draw(sf::RenderWindow &window){
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
         switch (phase / 20){
             case 0:
                 sprite = explosion_1;
@@ -153,6 +185,8 @@ public:
             case 2:
                 sprite = explosion_3;
         }
+        Point point = abstract_scene->Get_point(id);
+        sprite->setPosition(point.x, point.y);
         window.draw(*sprite);
         phase++;
         if (phase == 60){
@@ -174,6 +208,10 @@ public:
     sf::Texture all_texture;
     sf::Sprite  block_sprite;
     sf::Sprite  indestructible_block_sprite;
+    sf::Sprite  water_sprite;
+    //штаб
+    sf::Sprite  iliving_headquarters_sprite;
+    sf::Sprite  dead_headquarters_sprite;
     //танк
     sf::Sprite  tank_up_sprite;
     sf::Sprite  tank_down_sprite;
@@ -190,69 +228,111 @@ public:
     sf::Sprite  explosion_3;
 
     DrawScene(){
-        //? sprite.scale(3, 3);
-
         all_image.loadFromFile("/home/oleg/CLionProject/simple_RTS/60016.png");
         //вырезаем чёрный цвет, делая эту часть прозрачной
         all_image.createMaskFromColor(sf::Color(0, 0, 0));
         all_texture.loadFromImage(all_image);
         block_sprite.setTexture(all_texture);
         block_sprite.setTextureRect(sf::IntRect(256, 0, 8, 8));
+        block_sprite.scale(3, 3); //да
 
         indestructible_block_sprite.setTexture(all_texture);
         indestructible_block_sprite.setTextureRect(sf::IntRect(256, 16, 8, 8));
+        indestructible_block_sprite.scale(3, 3); //да
+
+        water_sprite.setTexture(all_texture);
+        water_sprite.setTextureRect(sf::IntRect(256, 48, 8, 8));
+        water_sprite.scale(3, 3); // да
+
+        iliving_headquarters_sprite.setTexture(all_texture);
+        iliving_headquarters_sprite.setTextureRect(sf::IntRect(304, 32, 16, 16));
+        iliving_headquarters_sprite.scale(3, 3); // да
+
+        dead_headquarters_sprite.setTexture(all_texture);
+        dead_headquarters_sprite.setTextureRect(sf::IntRect(320, 32, 16, 16));
+        dead_headquarters_sprite.scale(3, 3); // да
 
         tank_up_sprite.setTexture(all_texture);
         tank_up_sprite.setTextureRect(sf::IntRect(0, 1, 15, 15));
+        tank_up_sprite.scale(3, 3);
 
         tank_down_sprite.setTexture(all_texture);
         tank_down_sprite.setTextureRect(sf::IntRect(64, 0, 15, 15));
+        tank_down_sprite.scale(3, 3);
 
         tank_right_sprite.setTexture(all_texture);
         tank_right_sprite.setTextureRect(sf::IntRect(97, 0, 15, 15));
+        tank_right_sprite.scale(3, 3);
 
         tank_left_sprite.setTexture(all_texture);
         tank_left_sprite.setTextureRect(sf::IntRect(33, 0, 15, 15));
+        tank_left_sprite.scale(3, 3);
 
         bullet_up_sprite.setTexture(all_texture);
         bullet_up_sprite.setTextureRect(sf::IntRect(323, 102, 3, 4));
+        bullet_up_sprite.scale(3, 3);
 
         bullet_down_sprite.setTexture(all_texture);
         bullet_down_sprite.setTextureRect(sf::IntRect(339, 102, 3, 4));
+        bullet_down_sprite.scale(3, 3);
 
         bullet_right_sprite.setTexture(all_texture);
         bullet_right_sprite.setTextureRect(sf::IntRect(346, 102, 4, 3));
+        bullet_right_sprite.scale(3, 3);
 
         bullet_left_sprite.setTexture(all_texture);
         bullet_left_sprite.setTextureRect(sf::IntRect(330, 102, 4, 3));
+        bullet_left_sprite.scale(3, 3);
 
         explosion_1.setTexture(all_texture);
         explosion_1.setTextureRect(sf::IntRect(256, 128, 16, 16));
+        explosion_1.scale(3, 3);
 
         explosion_2.setTexture(all_texture);
         explosion_2.setTextureRect(sf::IntRect(272, 128, 16, 16));
+        explosion_2.scale(3, 3);
 
         explosion_3.setTexture(all_texture);
         explosion_3.setTextureRect(sf::IntRect(288, 128, 16, 16));
+        explosion_3.scale(3, 3);
+
         //будем добавлять структуры по мере необходимости
     };
 
     std::unordered_map <int, DrawObject*> object_list;
     void add_obj(const int id, const std::string& type){
         // собираем объекты в зависимости от их типа
-        if(type == "DistrBlock"){
+               if(type == "DistrBlock"){
             object_list[id] = new DrawBlock(id, &block_sprite);
         } else if (type == "UnDistrBlock"){ //а не надо отдельного класса
             object_list[id] = new DrawBlock(id, &indestructible_block_sprite);
+        } else if (type == "WaterBlock") { //а не надо отдельного класса
+            object_list[id] = new DrawBlock(id, &water_sprite);
+        } else if (type == "HeadquartersBlock") {
+            object_list[id] = new DrawBlock(id, &iliving_headquarters_sprite);
+        } else if (type == "Tank") {
+            object_list[id] = new DrawTank(id, &tank_up_sprite, &tank_down_sprite, &tank_right_sprite, &tank_left_sprite);
         }
     }
 
+    //забирает измемения из абстрактной сцены и создаёт объекты
+    void synchronize(AbstractScene *abstract_scene){
+        for(auto i: abstract_scene->obj_list){
+            if(object_list.find(i.first/*id*/) == object_list.end()){
+                //если нет объекта в рисующей схеме
+                //значит его надо создать
+                add_obj(i.first/*id*/, abstract_scene->accord_list[i.first/*id*/]);
+            }
+        }
+    };
+
     //глобальная функция рисования
     //проходится по object_list и вызывает для draw каждого
-    void draw(sf::RenderWindow &window)
+    void draw(sf::RenderWindow &window, AbstractScene *abstract_scene)
     {
         for (auto& i : object_list) {
-            i.second->draw(window);
+            //ну никак без этого, мы разделили сцены, хотя логически они связанны общим значением x, y
+            i.second->draw(window, abstract_scene);
         }
     }
 

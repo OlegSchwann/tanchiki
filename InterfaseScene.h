@@ -5,6 +5,10 @@
 #ifndef SIMPLE_RTS_INTERFASESCENE_H
 #define SIMPLE_RTS_INTERFASESCENE_H
 
+struct Point{ //точка, возвращаемая абстрактным классом для отрисовки текстуры
+    int x;
+    int y;
+};
 
 class InterfaseObject{
 public:

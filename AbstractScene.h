@@ -14,11 +14,6 @@
 #include "InterfaseScene.h"
 #include <iterator>
 
-struct Point{
-    int x;
-    int y;
-};
-
 struct UpdateData {
     std::string str;
     std::string type;
@@ -31,7 +26,9 @@ public:
         //конструктор базового класса или неразрушимого блока или стенки или леса, или воды или базы
         //возможность столкнуться существует только в физической сцене
     };
-    Point &get_x_y(){ return point;};
+    inline Point get_point(){
+        return point;
+    };
     virtual UpdateData serialise(){};
     virtual void apply(UpdateData){};
     void set_x_y(int x, int y){
@@ -105,6 +102,16 @@ public:
     //написать get_obj
 };
 
+//штаб, тут только переменная is_alive, которую мы будем устанавливать в обработчике столкновений.
+//TODO: дать пуле атрибут, "наносит урон". Танк ведь не наносит урон при наезде?
+class AbstractHeadquarters: public AbstractObject{
+public:
+    bool is_alive;
+    AbstractHeadquarters(const int id, Point point):AbstractObject(id, point), is_alive(true){
+        std::cout << "конструктор штаба\n";
+    }
+};
+
 class AbstrBullet: public AbstractObject, public Directable, public Killable
 {
 public:
@@ -145,8 +152,17 @@ public:
             obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, 0, 1);
         } else if(type == "Board") {
             //нужен край карты
+        } else if(type == "WaterBlock") {
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y});
+        } else if(type == "HeadquartersBlock") {
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y});
         }
         count_id++;
+    }
+
+    // функция, возвращающая point объекта по id
+    Point Get_point(int id){
+        return obj_list[id]->get_point();
     }
 
     void load_map(std::fstream& file)
@@ -168,16 +184,16 @@ public:
                     case '.':
                         break;
                     case '!': //база
-                        break;
-                    case '%': //лес
+                        this->add_obj(x, y, "HeadquartersBlock");
                         break;
                     case '~': //вода
+                        this->add_obj(x, y, "WaterBlock");
                         break;
                 }
-                x += 800 / 26;
+                x += 24; //3 * 8(px в блоке)
             }
             x = 0;
-            y += 800 / 26;
+            y += 24;
         }
     }
 
