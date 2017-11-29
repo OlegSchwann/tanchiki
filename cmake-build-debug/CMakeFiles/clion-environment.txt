@@ -1,2 +1,2 @@
 Options: 
-CMake: 3.8.2@/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake
+CMake: 3.8.2@/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake

@@ -104,6 +104,12 @@
 		<Unit filename="/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h">
 			<Option target="simple_RTS"/>
 		</Unit>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.cpp">
+			<Option target="simple_RTS"/>
+		</Unit>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h">
+			<Option target="simple_RTS"/>
+		</Unit>
 		<Unit filename="/home/oleg/CLionProject/simple_RTS_рисующее/main.cpp">
 			<Option target="simple_RTS"/>
 		</Unit>

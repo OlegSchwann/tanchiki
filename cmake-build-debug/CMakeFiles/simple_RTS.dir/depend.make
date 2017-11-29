@@ -87,6 +87,18 @@ CMakeFiles/simple_RTS.dir/DrawScene.cpp.o: ../InterfaseScene.h
 CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o: ../InterfaseScene.cpp
 CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o: ../InterfaseScene.h
 
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Config.hpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.hpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.inl
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Export.hpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Time.hpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.hpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.inl
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../AbstractScene.h
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../InterfaseScene.h
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../PhisicalScene.cpp
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../PhisicalScene.h
+
 CMakeFiles/simple_RTS.dir/main.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Config.hpp
 CMakeFiles/simple_RTS.dir/main.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics.hpp
 CMakeFiles/simple_RTS.dir/main.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/BlendMode.hpp
@@ -161,5 +173,6 @@ CMakeFiles/simple_RTS.dir/main.cpp.o: /home/oleg/CLionProject/simple_RTS/SFML-2.
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../AbstractScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../DrawScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../InterfaseScene.h
+CMakeFiles/simple_RTS.dir/main.cpp.o: ../PhisicalScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../main.cpp
 

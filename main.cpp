@@ -14,15 +14,15 @@
     повторяет(ждёт следующего тика)
 */
 
-#include <SFML/Graphics.hpp>
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <unordered_map>
-#include "InterfaseScene.h"
-#include "DrawScene.h"
 #include "AbstractScene.h"
+#include "PhisicalScene.h"
+#include "DrawScene.h"
 // вся графическая подсистема
 // кусочек для теста, пример как пользоваться
 
@@ -44,16 +44,16 @@ int main()
     DrawScene draw_scene;
     //забирает измемения из абстрактной сцены
 
-    //задача 1 нарисовать стенку
-    abstract_scene.add_obj(30, 25, "Tank");
+    //задача нарисовать танк
+    abstract_scene.add_obj(7*8*3, 24*8*3, "Tank");
     draw_scene.synchronize(&abstract_scene);
 
+    PhisicalScene phisical_scene;
+    phisical_scene.synchronize(&abstract_scene);
     // все подготовительные действия
     // минимальная длительность игрового цикла
-    sf::Time cycle_time = sf::seconds(1);//0.02f);
+    sf::Time cycle_time = sf::seconds(0.05);//0.02f);
     sf::RenderWindow window(sf::VideoMode(624, 624), "simple rts");
-
-
 
     sf::Clock clock;
     sf::Event event;
@@ -66,6 +66,7 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        phisical_scene.handle_tick_all_objects(&abstract_scene);
         window.clear();
         //выводим все спрайты на экран
         //пришлось дать знать рисующей сцене о абстрактной сцене. Это нужно, что бы получать х, y отображения этого объекта.

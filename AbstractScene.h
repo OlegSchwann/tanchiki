@@ -31,9 +31,8 @@ public:
     };
     virtual UpdateData serialise(){};
     virtual void apply(UpdateData){};
-    void set_x_y(int x, int y){
-        point.x = x;
-        point.y = y;
+    void set_point(Point point){
+        this->point = point;
     };
     //написать get_obj;
     ~AbstractObject(){};
@@ -78,7 +77,7 @@ protected:
 class AbstrTank: public AbstractObject, public Directable, public Killable
 {
 public:
-    AbstrTank(const int id, Point init_point = {0, 0}, const int dir = 0, const int health = 1):
+    AbstrTank(const int id, Point init_point = {0, 0}, const int dir = UP, const int health = 1):
             AbstractObject(id, init_point),
             Directable(dir),
             Killable(health)
@@ -149,7 +148,7 @@ public:
         } else if(type == "Bullet") {
             obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, 0, 1);
         } else if(type == "Tank") {
-            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, 0, 1);
+            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, UP, 1);
         } else if(type == "Board") {
             //нужен край карты
         } else if(type == "WaterBlock") {

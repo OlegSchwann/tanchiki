@@ -42,10 +42,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -E remove -f
+RM = /home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/oleg/CLionProject/simple_RTS_рисующее/cmake-bui
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -73,7 +73,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.3968.17/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/oleg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -207,6 +207,33 @@ InterfaseScene.cpp.s:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.s
 .PHONY : InterfaseScene.cpp.s
 
+PhisicalScene.o: PhisicalScene.cpp.o
+
+.PHONY : PhisicalScene.o
+
+# target to build an object file
+PhisicalScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o
+.PHONY : PhisicalScene.cpp.o
+
+PhisicalScene.i: PhisicalScene.cpp.i
+
+.PHONY : PhisicalScene.i
+
+# target to preprocess a source file
+PhisicalScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.i
+.PHONY : PhisicalScene.cpp.i
+
+PhisicalScene.s: PhisicalScene.cpp.s
+
+.PHONY : PhisicalScene.s
+
+# target to generate assembly for a file
+PhisicalScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.s
+.PHONY : PhisicalScene.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -252,6 +279,9 @@ help:
 	@echo "... InterfaseScene.o"
 	@echo "... InterfaseScene.i"
 	@echo "... InterfaseScene.s"
+	@echo "... PhisicalScene.o"
+	@echo "... PhisicalScene.i"
+	@echo "... PhisicalScene.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

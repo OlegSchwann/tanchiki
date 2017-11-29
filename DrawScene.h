@@ -11,12 +11,6 @@
 #include "InterfaseScene.h"
 #include "AbstractScene.h"
 
-#define DOWN 0
-#define RIGHT 1
-#define UP 2
-#define LEFT 3
-
-
 //рисуемый объект - знает, как нарисовать себя на передаваемом холсте
 class DrawObject: public InterfaseObject{
 public:
@@ -315,8 +309,8 @@ public:
         }
     }
 
-    //забирает измемения из абстрактной сцены и создаёт объекты
     void synchronize(AbstractScene *abstract_scene){
+        //забирает измемения из абстрактной сцены и создаёт объекты
         for(auto i: abstract_scene->obj_list){
             if(object_list.find(i.first/*id*/) == object_list.end()){
                 //если нет объекта в рисующей схеме
@@ -324,8 +318,16 @@ public:
                 add_obj(i.first/*id*/, abstract_scene->accord_list[i.first/*id*/]);
             }
         }
+        //сверяет изменения с абстрактной сценой и удаляет объекты
+        for(auto i: object_list){
+            if(abstract_scene->obj_list.find(i.first/*id*/) ==
+               abstract_scene->obj_list.end()){
+                //если нет объекта в абстрактной сцене
+                //значит его надо удалить и из нашей сцены
+                erase_object(i.first/*id*/);
+            }
+        }
     };
-
     //глобальная функция рисования
     //проходится по object_list и вызывает для draw каждого
     void draw(sf::RenderWindow &window, AbstractScene *abstract_scene)

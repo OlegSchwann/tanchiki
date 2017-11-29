@@ -87,6 +87,18 @@ CMakeFiles/simple_RTS.dir/DrawScene.cpp.o
 CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o
  /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.cpp
  /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Config.hpp
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.hpp
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.inl
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Export.hpp
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Time.hpp
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.hpp
+ /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.inl
+ /home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+ /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+ /home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.cpp
+ /home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o
  /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Config.hpp
  /home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics.hpp
@@ -162,4 +174,5 @@ CMakeFiles/simple_RTS.dir/main.cpp.o
  /home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
  /home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.h
  /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+ /home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h
  /home/oleg/CLionProject/simple_RTS_рисующее/main.cpp
