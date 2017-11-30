@@ -253,8 +253,12 @@ class PhisicalScene: public InterfaceScene{
 public:
     PhisicalScene(){
         //края карты - фиктивные объекты, неуничтожимые и невидимые, не имеющие абстрактного отобра
-
-
+        // всё поле 624 * 624
+        // косяк - протяжённость сначала по Y, потом по x
+        object_list[1] = new UnDistrPhisicalBlock(1, 16, 624); // ▀ верхняя стенка
+        object_list[2] = new UnDistrPhisicalBlock(2, 16, 624); // ▄ нижняя стенка
+        object_list[3] = new UnDistrPhisicalBlock(3, 624, 16); // ▌ левая стенка
+        object_list[4] = new UnDistrPhisicalBlock(4, 624, 16); // ▐ правая стенка
     };
     std::unordered_map <int, PhisicalObject*> object_list;
     ~PhisicalScene(){

@@ -122,7 +122,17 @@ public:
 class AbstractScene: InterfaceScene
 {
 public:
-    AbstractScene():count_id(0){};
+    AbstractScene():count_id(100) { //пусть начинается со 100, 1-4 будет выделено под фиктивные объекты неразрушимых краёв карты
+        // всё поле 624 * 624
+        accord_list[1] = "UpBorderline";
+        obj_list[1] = new AbstractObject(1, Point{0, -16}, 1000); // ▀ верхняя стенка
+        accord_list[2] = "DounBorderline";
+        obj_list[2] = new AbstractObject(2, Point{0, 625}, 1000); // ▄ нижняя стенка
+        accord_list[3] = "LeftBorderline";
+        obj_list[3] = new AbstractObject(3, Point{-16, 0}, 1000); // ▌ левая стенка
+        accord_list[4] = "RightBorderline";
+        obj_list[4] = new AbstractObject(4, Point{625, 0}, 1000); // ▐ правая стенка
+    }
     std::map <int , std::string> accord_list;
     std::unordered_map <int, AbstractObject*> obj_list;
     void add_obj(const int x,const int y, const std::string& type)
@@ -135,7 +145,7 @@ public:
         } else if(type == "Bullet") {
             obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, UP, 1);
         } else if(type == "Tank") {
-            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, UP, 1);
+            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, DOWN, 1);
         } else if(type == "WaterBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "HeadquartersBlock") {
