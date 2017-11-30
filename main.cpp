@@ -46,6 +46,7 @@ int main()
 
     //задача нарисовать танк
     abstract_scene.add_obj(7*8*3, 24*8*3, "Tank");
+    abstract_scene.add_obj(7*8*3, 16*8*3, "Bullet");
     draw_scene.synchronize(&abstract_scene);
 
     PhisicalScene phisical_scene;
@@ -67,6 +68,9 @@ int main()
                 window.close();
         }
         phisical_scene.handle_tick_all_objects(&abstract_scene);
+        abstract_scene.clear_dead();
+        draw_scene.synchronize(&abstract_scene);
+        phisical_scene.synchronize(&abstract_scene);
         window.clear();
         //выводим все спрайты на экран
         //пришлось дать знать рисующей сцене о абстрактной сцене. Это нужно, что бы получать х, y отображения этого объекта.

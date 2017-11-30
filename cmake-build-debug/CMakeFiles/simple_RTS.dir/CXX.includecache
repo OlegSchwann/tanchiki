@@ -661,6 +661,8 @@ InterfaseScene.h
 /home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
 iterator
 -
+map
+-
 
 /home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.cpp
 DrawScene.h

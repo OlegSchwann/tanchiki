@@ -187,6 +187,7 @@ public:
             //надо вызвать удаление этого объекта и его отображения в абстрактном классе.
         }
     };
+
 private:
     sf::Sprite *explosion_1;
     sf::Sprite *explosion_2;
@@ -306,6 +307,9 @@ public:
             object_list[id] = new DrawBlock(id, &iliving_headquarters_sprite);
         } else if (type == "Tank") {
             object_list[id] = new DrawTank(id, &tank_up_sprite, &tank_down_sprite, &tank_right_sprite, &tank_left_sprite);
+        } else if (type == "Bullet") {
+            object_list[id] = new DrawBullet(id, &bullet_up_sprite, &bullet_down_sprite,
+                                                 &bullet_right_sprite, &bullet_left_sprite);
         }
     }
 
@@ -319,13 +323,17 @@ public:
             }
         }
         //сверяет изменения с абстрактной сценой и удаляет объекты
-        for(auto i: object_list){
-            if(abstract_scene->obj_list.find(i.first/*id*/) ==
-               abstract_scene->obj_list.end()){
+        std::vector<int> to_remove;
+        for(auto i: this->object_list) {
+            if (abstract_scene->obj_list.find(i.first/*id*/) ==
+                abstract_scene->obj_list.end()) {
                 //если нет объекта в абстрактной сцене
                 //значит его надо удалить и из нашей сцены
-                erase_object(i.first/*id*/);
+                to_remove.push_back(i.first);
             }
+        }
+        for (auto i : to_remove) {
+            object_list.erase(i);
         }
     };
     //глобальная функция рисования
@@ -336,10 +344,6 @@ public:
             //ну никак без этого, мы разделили сцены, хотя логически они связанны общим значением x, y
             i.second->draw(window, abstract_scene);
         }
-    }
-
-    void erase_object(const int id){
-        object_list.erase(id);
     }
 
     ~DrawScene(){
