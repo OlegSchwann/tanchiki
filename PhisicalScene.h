@@ -152,8 +152,8 @@ public:
 class PhisicalBullet: public PhisicalObject{
 public:
     PhisicalBullet(const int id, const int heigth, const int width, const int speed):
-            PhisicalObject(id, heigth, width){
-
+        PhisicalObject(id, heigth, width, speed){
+        std::cout << "Конструктор PhisicalBullet\n";
     };
     ~PhisicalBullet(){};
 protected:
@@ -161,6 +161,7 @@ protected:
         AbstractObject * abstract_object = abstract_scene->obj_list[id];
         AbstrBullet *abstract_bullet = dynamic_cast<AbstrBullet *>(abstract_object);
         Point point = abstract_bullet->get_point();
+        std::cout << "Координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
         int direct = abstract_bullet->get_dir();
         switch (direct){
             case UP:
@@ -177,12 +178,12 @@ protected:
                 break;
         }
         abstract_bullet->set_point(point);
+        std::cout << "новые координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
     };
 public:
     void make_damage(AbstractScene *abstract_scene){
         AbstractObject * abstract_object = abstract_scene->obj_list[id];
-        AbstrBullet *abstract_bullet = dynamic_cast<AbstrBullet *>(abstract_object);
-        abstract_bullet->set_health(abstract_bullet->get_health()-1);
+        abstract_object->set_health((abstract_object->get_health())-1);
     };
 
     // рамка, в которой будет находиться объект, если ему ничего не помешает
@@ -216,6 +217,7 @@ public:
                 // пуля нанесла урон в двух
                 i.second->make_damage(abstract_scene);
                 make_damage(abstract_scene);
+                std::cout << "Пуля столкнулась, здоровье = " << abstract_scene->obj_list[i.first]->get_health() << "\n";
                 return;
             }
         }
@@ -249,7 +251,11 @@ public:
 
 class PhisicalScene: public InterfaceScene{
 public:
-    PhisicalScene(){};
+    PhisicalScene(){
+        //края карты - фиктивные объекты, неуничтожимые и невидимые, не имеющие абстрактного отобра
+
+
+    };
     std::unordered_map <int, PhisicalObject*> object_list;
     ~PhisicalScene(){
         for(auto i : object_list){
@@ -267,7 +273,7 @@ public:
             object_list[id] = new PhisicalBullet(id, 4*3, 4*3, 10);
             //TODO: подобрать скорость
         } else if(type == "Tank") {
-            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 2);
+            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 5);
             //TODO: подобрать скорость
         } else if(type == "Board") {
             //нужен край карты
@@ -289,13 +295,19 @@ public:
             }
         }
         //сверяет изменения с абстрактной сценой и удаляет объекты
+        std::vector <int> to_remove;
         for(auto i: object_list){
             if(abstract_scene->obj_list.find(i.first/*id*/) ==
                abstract_scene->obj_list.end()){
                 //если нет объекта в абстрактной сцене
                 //значит его надо удалить и из нашей сцены
-                erase_object(i.first/*id*/);
+                to_remove.push_back(i.first);
             }
+        }
+        //Нельзя вызывать извлечение элемента из объекта когда итерируемся по нему.
+        //это приводит к сигналу 11 - обращение к неверному участку памяти.
+        for (auto i : to_remove){
+            object_list.erase(i);
         }
     };
 
@@ -305,12 +317,6 @@ public:
         for(auto i : object_list){
             i.second->handle_tick(abstract_scene, &(this->object_list));
         }
-    }
-
-protected:
-    void erase_object(int id)
-    {
-        object_list.erase(id);
     }
 };
 

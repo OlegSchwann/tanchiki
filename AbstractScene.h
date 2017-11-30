@@ -13,6 +13,7 @@
 #include <iostream>
 #include "InterfaseScene.h"
 #include <iterator>
+#include <map>
 
 struct UpdateData {
     std::string str;
@@ -21,7 +22,7 @@ struct UpdateData {
 
 class AbstractObject:public InterfaseObject{
 public:
-    AbstractObject(const int id, Point point):InterfaseObject(id), point(point){
+    AbstractObject(const int id, Point point, int health):InterfaseObject(id), point(point), health(health){
         std::cout << "конструктор базового класса\n";
         //конструктор базового класса или неразрушимого блока или стенки или леса, или воды или базы
         //возможность столкнуться существует только в физической сцене
@@ -36,6 +37,13 @@ public:
     };
     //написать get_obj;
     ~AbstractObject(){};
+    int health;
+    void set_health( int new_healse){
+        health = new_healse;
+    }
+    int get_health(){
+        return health;
+    }
 protected:
     Point point;
 };
@@ -58,29 +66,11 @@ protected:
     int direct;
 };
 
-class Killable
-{
-public:
-    Killable(const int health = 0):health(health){}
-    void set_health(const int health)
-    {
-        this->health = health;
-    }
-    int& get_health()
-    {
-        return health;
-    }
-protected:
-    int health;
-};
-
-class AbstrTank: public AbstractObject, public Directable, public Killable
-{
+class AbstrTank: public AbstractObject, public Directable{
 public:
     AbstrTank(const int id, Point init_point = {0, 0}, const int dir = UP, const int health = 1):
-            AbstractObject(id, init_point),
-            Directable(dir),
-            Killable(health)
+            AbstractObject(id, init_point, health),
+            Directable(dir)
     {
         std::cout << "конструктор танка\n";
         //реализовать время последнего выстрела - сейчас
@@ -92,10 +82,9 @@ public:
     //написать get_obj
 };
 
-class AbstrDistrBlock: public AbstractObject, public Killable
-{
+class AbstrDistrBlock: public AbstractObject{
 public:
-    AbstrDistrBlock(const int id, Point point = {0,0}, const int health = 0):AbstractObject(id, point), Killable(health){
+    AbstrDistrBlock(const int id, Point point = {0,0}, const int health = 1):AbstractObject(id, point, health){
         std::cout << "конструктор разрушимого блока\n";
     }
     //написать get_obj
@@ -106,18 +95,16 @@ public:
 class AbstractHeadquarters: public AbstractObject{
 public:
     bool is_alive;
-    AbstractHeadquarters(const int id, Point point):AbstractObject(id, point), is_alive(true){
+    AbstractHeadquarters(const int id, Point point):AbstractObject(id, point, 1), is_alive(true){
         std::cout << "конструктор штаба\n";
     }
 };
 
-class AbstrBullet: public AbstractObject, public Directable, public Killable
-{
+class AbstrBullet: public AbstractObject, public Directable{
 public:
     AbstrBullet(const int id, Point init_point = {0, 0}, const int dir = 0, const int health = 1):
-            AbstractObject(id, init_point),
-            Directable(dir),
-            Killable(health)
+            AbstractObject(id, init_point, health),
+            Directable(dir)
     {
         std::cout << "конструктор пули\n";
         //!!!!!!! нужно время этого выстрела сохранить
@@ -136,7 +123,7 @@ class AbstractScene: InterfaceScene
 {
 public:
     AbstractScene():count_id(0){};
-    std::unordered_map <int , std::string> accord_list;
+    std::map <int , std::string> accord_list;
     std::unordered_map <int, AbstractObject*> obj_list;
     void add_obj(const int x,const int y, const std::string& type)
     {
@@ -144,19 +131,33 @@ public:
         if(type == "DistrBlock") {
             obj_list[count_id] = new AbstrDistrBlock(count_id, Point{x, y}, 1);
         } else if(type == "UnDistrBlock") {
-            obj_list[count_id] = new AbstractObject(count_id, Point{x, y});
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "Bullet") {
-            obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, 0, 1);
+            obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, UP, 1);
         } else if(type == "Tank") {
             obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, UP, 1);
-        } else if(type == "Board") {
-            //нужен край карты
         } else if(type == "WaterBlock") {
-            obj_list[count_id] = new AbstractObject(count_id, Point{x, y});
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "HeadquartersBlock") {
-            obj_list[count_id] = new AbstractObject(count_id, Point{x, y});
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1);
         }
         count_id++;
+    }
+
+    //функция, очищающая список объектов от убитых с health <= 0
+    void clear_dead(){
+        std::vector <int> to_remove;
+        for(auto i: obj_list){
+            if(i.second->health <= 0){
+                to_remove.push_back(i.first);
+            }
+        }
+        for(auto i: to_remove) {
+            delete obj_list[i];
+            obj_list.erase(i);
+            accord_list.erase(i);
+        }
+        std::cout << "удалено\n"<< std::endl;
     }
 
     // функция, возвращающая point объекта по id
@@ -171,8 +172,7 @@ public:
         int y = 0;
         while(std::getline(file, str))
         {
-            for (auto& i : str)
-            {
+            for (auto& i : str){
                 switch(i){
                     case '#':
                         this->add_obj(x, y, "DistrBlock");
@@ -197,11 +197,6 @@ public:
     }
 
     std::vector<std::string>&  get_obj()
-    {
-        //
-    }
-
-    void erase_obj(const int id)
     {
         //
     }
