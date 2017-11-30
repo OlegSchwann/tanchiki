@@ -80,6 +80,5 @@ int main()
         std::cout << "отрисовано за " << elapsed_time.asMilliseconds() << " миллисекунд\n";
         sf::sleep(cycle_time - elapsed_time);
     }
-
     return 0;
 }
