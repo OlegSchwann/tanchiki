@@ -13,7 +13,6 @@
 #include <iostream>
 #include "InterfaseScene.h"
 #include <iterator>
-#include <map>
 
 struct UpdateData {
     std::string str;
@@ -75,7 +74,7 @@ public:
         std::cout << "конструктор танка\n";
         //реализовать время последнего выстрела - сейчас
         //last_shoot(last_shoot)
-        //, sf::Time last_shoot = sf::seconds(0.0)
+        //sf::Time last_shoot = sf::seconds(0.0)
     };
     ~AbstrTank(){};
     sf::Time last_shoot;
@@ -112,15 +111,14 @@ public:
     ~AbstrBullet(){};
 };
 
-class InterfaceScene {
-public:
-    virtual ~InterfaceScene(){};
-};
+//class InterfaceScene {
+//public:
+//    virtual ~InterfaceScene(){};
+//};
 
 //абстрактная сцена
 //общие данные остальных сцен
-class AbstractScene: InterfaceScene
-{
+class AbstractScene: InterfaseScene{
 public:
     AbstractScene():count_id(100) { //пусть начинается со 100, 1-4 будет выделено под фиктивные объекты неразрушимых краёв карты
         // всё поле 624 * 624
@@ -133,9 +131,9 @@ public:
         accord_list[4] = "RightBorderline";
         obj_list[4] = new AbstractObject(4, Point{625, 0}, 1000); // ▐ правая стенка
     }
-    std::map <int , std::string> accord_list;
+    std::unordered_map <int , std::string> accord_list;
     std::unordered_map <int, AbstractObject*> obj_list;
-    void add_obj(const int x,const int y, const std::string& type)
+    void add_obj(const int x,const int y, const std::string& type, int dir=UP)
     {
         accord_list[count_id] = type;
         if(type == "DistrBlock") {
@@ -143,9 +141,9 @@ public:
         } else if(type == "UnDistrBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "Bullet") {
-            obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, UP, 1);
+            obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, dir, 1);
         } else if(type == "Tank") {
-            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, DOWN, 1);
+            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, dir, 1);
         } else if(type == "WaterBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "HeadquartersBlock") {
@@ -212,6 +210,29 @@ public:
     }
 
     ~AbstractScene(){};
+
+    //функция, создающая пулю около этого танка с учётом направления дула танка
+    void create_abctract_bullet(int id){
+        //напоминание: танк 15*3 на 15*3
+        //пуля 4*3 на 4*3
+        AbstrTank *abstract_tank = dynamic_cast<AbstrTank *>(this->obj_list[id]);
+        Point point = abstract_tank->get_point();
+        switch(abstract_tank->get_dir()) {
+            case DOWN:  // ⍗
+                add_obj(point.x + 16, point.y + 45, "Bullet", DOWN);
+                break;
+            case RIGHT: // ⍈
+                add_obj(point.x + 45, point.y + 16, "Bullet", RIGHT);
+                break;
+            case UP:    // ⍐
+                add_obj(point.x + 16, point.y - 12, "Bullet", UP);
+                break;
+            case LEFT:  // ⍇
+                add_obj(point.x - 12, point.y + 16, "Bullet", LEFT);
+                break;
+        }
+    }
+
 protected:
     int count_id;
 };

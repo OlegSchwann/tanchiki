@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o"
   "CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o"
   "CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o"
+  "CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o"
   "simple_RTS.pdb"
   "simple_RTS"
 )

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Config.hpp
+../SFML-2.4.2/include/SFML/Config.hpp
 TargetConditionals.h
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/TargetConditionals.h
+../SFML-2.4.2/include/SFML/TargetConditionals.h
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics.hpp
+../SFML-2.4.2/include/SFML/Graphics.hpp
 SFML/Window.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -64,21 +64,21 @@ SFML/Graphics/VertexArray.hpp
 SFML/Graphics/View.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/BlendMode.hpp
+../SFML-2.4.2/include/SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp
+../SFML-2.4.2/include/SFML/Graphics/CircleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Color.hpp
+../SFML-2.4.2/include/SFML/Graphics/Color.hpp
 SFML/Graphics/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/ConvexShape.hpp
+../SFML-2.4.2/include/SFML/Graphics/ConvexShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
@@ -86,17 +86,17 @@ SFML/Graphics/Shape.hpp
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Drawable.hpp
+../SFML-2.4.2/include/SFML/Graphics/Drawable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderStates.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Export.hpp
+../SFML-2.4.2/include/SFML/Graphics/Export.hpp
 SFML/Config.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Font.hpp
+../SFML-2.4.2/include/SFML/Graphics/Font.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Glyph.hpp
@@ -116,7 +116,7 @@ string
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Glsl.hpp
+../SFML-2.4.2/include/SFML/Graphics/Glsl.hpp
 SFML/Graphics/Transform.hpp
 -
 SFML/Graphics/Color.hpp
@@ -128,15 +128,15 @@ SFML/System/Vector3.hpp
 SFML/Graphics/Glsl.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Glsl.inl
+../SFML-2.4.2/include/SFML/Graphics/Glsl.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Glyph.hpp
+../SFML-2.4.2/include/SFML/Graphics/Glyph.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Image.hpp
+../SFML-2.4.2/include/SFML/Graphics/Image.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -148,9 +148,9 @@ string
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/PrimitiveType.hpp
+../SFML-2.4.2/include/SFML/Graphics/PrimitiveType.hpp
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.hpp
+../SFML-2.4.2/include/SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 algorithm
@@ -158,15 +158,15 @@ algorithm
 SFML/Graphics/Rect.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Rect.inl
+../SFML-2.4.2/include/SFML/Graphics/Rect.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/RectangleShape.hpp
+../SFML-2.4.2/include/SFML/Graphics/RectangleShape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Shape.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/RenderStates.hpp
+../SFML-2.4.2/include/SFML/Graphics/RenderStates.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -174,7 +174,7 @@ SFML/Graphics/BlendMode.hpp
 SFML/Graphics/Transform.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/RenderTarget.hpp
+../SFML-2.4.2/include/SFML/Graphics/RenderTarget.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -196,7 +196,7 @@ SFML/Graphics/Vertex.hpp
 SFML/System/NonCopyable.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/RenderTexture.hpp
+../SFML-2.4.2/include/SFML/Graphics/RenderTexture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Texture.hpp
@@ -204,7 +204,7 @@ SFML/Graphics/Texture.hpp
 SFML/Graphics/RenderTarget.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/RenderWindow.hpp
+../SFML-2.4.2/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/RenderTarget.hpp
@@ -216,7 +216,7 @@ SFML/Window/Window.hpp
 string
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Shader.hpp
+../SFML-2.4.2/include/SFML/Graphics/Shader.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Glsl.hpp
@@ -234,7 +234,7 @@ map
 string
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Shape.hpp
+../SFML-2.4.2/include/SFML/Graphics/Shape.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -246,7 +246,7 @@ SFML/Graphics/VertexArray.hpp
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Sprite.hpp
+../SFML-2.4.2/include/SFML/Graphics/Sprite.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -258,7 +258,7 @@ SFML/Graphics/Vertex.hpp
 SFML/Graphics/Rect.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Text.hpp
+../SFML-2.4.2/include/SFML/Graphics/Text.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Drawable.hpp
@@ -278,7 +278,7 @@ string
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Texture.hpp
+../SFML-2.4.2/include/SFML/Graphics/Texture.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Image.hpp
@@ -286,7 +286,7 @@ SFML/Graphics/Image.hpp
 SFML/Window/GlResource.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Transform.hpp
+../SFML-2.4.2/include/SFML/Graphics/Transform.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -294,13 +294,13 @@ SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Transformable.hpp
+../SFML-2.4.2/include/SFML/Graphics/Transformable.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Transform.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/Vertex.hpp
+../SFML-2.4.2/include/SFML/Graphics/Vertex.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Color.hpp
@@ -308,7 +308,7 @@ SFML/Graphics/Color.hpp
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/VertexArray.hpp
+../SFML-2.4.2/include/SFML/Graphics/VertexArray.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Vertex.hpp
@@ -322,7 +322,7 @@ SFML/Graphics/Drawable.hpp
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Graphics/View.hpp
+../SFML-2.4.2/include/SFML/Graphics/View.hpp
 SFML/Graphics/Export.hpp
 -
 SFML/Graphics/Rect.hpp
@@ -332,7 +332,7 @@ SFML/Graphics/Transform.hpp
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System.hpp
+../SFML-2.4.2/include/SFML/System.hpp
 SFML/Config.hpp
 -
 SFML/System/Clock.hpp
@@ -370,23 +370,23 @@ SFML/System/Vector2.hpp
 SFML/System/Vector3.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Clock.hpp
+../SFML-2.4.2/include/SFML/System/Clock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Err.hpp
+../SFML-2.4.2/include/SFML/System/Err.hpp
 SFML/System/Export.hpp
 -
 ostream
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Export.hpp
+../SFML-2.4.2/include/SFML/System/Export.hpp
 SFML/Config.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/FileInputStream.hpp
+../SFML-2.4.2/include/SFML/System/FileInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
@@ -400,19 +400,19 @@ cstdio
 string
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/InputStream.hpp
+../SFML-2.4.2/include/SFML/System/InputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Lock.hpp
+../SFML-2.4.2/include/SFML/System/Lock.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/MemoryInputStream.hpp
+../SFML-2.4.2/include/SFML/System/MemoryInputStream.hpp
 SFML/Config.hpp
 -
 SFML/System/InputStream.hpp
@@ -422,23 +422,23 @@ SFML/System/Export.hpp
 cstdlib
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Mutex.hpp
+../SFML-2.4.2/include/SFML/System/Mutex.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/NonCopyable.hpp
+../SFML-2.4.2/include/SFML/System/NonCopyable.hpp
 SFML/System/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Sleep.hpp
+../SFML-2.4.2/include/SFML/System/Sleep.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Time.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/String.hpp
+../SFML-2.4.2/include/SFML/System/String.hpp
 SFML/System/Export.hpp
 -
 SFML/System/Utf.hpp
@@ -452,9 +452,9 @@ string
 SFML/System/String.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/String.inl
+../SFML-2.4.2/include/SFML/System/String.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Thread.hpp
+../SFML-2.4.2/include/SFML/System/Thread.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -464,9 +464,9 @@ cstdlib
 SFML/System/Thread.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Thread.inl
+../SFML-2.4.2/include/SFML/System/Thread.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/ThreadLocal.hpp
+../SFML-2.4.2/include/SFML/System/ThreadLocal.hpp
 SFML/System/Export.hpp
 -
 SFML/System/NonCopyable.hpp
@@ -474,19 +474,19 @@ SFML/System/NonCopyable.hpp
 cstdlib
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/ThreadLocalPtr.hpp
+../SFML-2.4.2/include/SFML/System/ThreadLocalPtr.hpp
 SFML/System/ThreadLocal.hpp
 -
 SFML/System/ThreadLocalPtr.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/ThreadLocalPtr.inl
+../SFML-2.4.2/include/SFML/System/ThreadLocalPtr.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Time.hpp
+../SFML-2.4.2/include/SFML/System/Time.hpp
 SFML/System/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Utf.hpp
+../SFML-2.4.2/include/SFML/System/Utf.hpp
 SFML/Config.hpp
 -
 algorithm
@@ -500,21 +500,21 @@ cstdlib
 SFML/System/Utf.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Utf.inl
+../SFML-2.4.2/include/SFML/System/Utf.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.hpp
+../SFML-2.4.2/include/SFML/System/Vector2.hpp
 SFML/System/Vector2.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector2.inl
+../SFML-2.4.2/include/SFML/System/Vector2.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector3.hpp
+../SFML-2.4.2/include/SFML/System/Vector3.hpp
 SFML/System/Vector3.inl
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/System/Vector3.inl
+../SFML-2.4.2/include/SFML/System/Vector3.inl
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window.hpp
+../SFML-2.4.2/include/SFML/Window.hpp
 SFML/System.hpp
 -
 SFML/Window/Context.hpp
@@ -542,7 +542,7 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Context.hpp
+../SFML-2.4.2/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
 SFML/Window/GlResource.hpp
@@ -552,9 +552,9 @@ SFML/Window/ContextSettings.hpp
 SFML/System/NonCopyable.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/ContextSettings.hpp
+../SFML-2.4.2/include/SFML/Window/ContextSettings.hpp
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Event.hpp
+../SFML-2.4.2/include/SFML/Window/Event.hpp
 SFML/Config.hpp
 -
 SFML/Window/Joystick.hpp
@@ -566,33 +566,33 @@ SFML/Window/Mouse.hpp
 SFML/Window/Sensor.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Export.hpp
+../SFML-2.4.2/include/SFML/Window/Export.hpp
 SFML/Config.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/GlResource.hpp
+../SFML-2.4.2/include/SFML/Window/GlResource.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Joystick.hpp
+../SFML-2.4.2/include/SFML/Window/Joystick.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/String.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Keyboard.hpp
+../SFML-2.4.2/include/SFML/Window/Keyboard.hpp
 SFML/Window/Export.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Mouse.hpp
+../SFML-2.4.2/include/SFML/Window/Mouse.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Sensor.hpp
+../SFML-2.4.2/include/SFML/Window/Sensor.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector3.hpp
@@ -600,19 +600,19 @@ SFML/System/Vector3.hpp
 SFML/System/Time.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Touch.hpp
+../SFML-2.4.2/include/SFML/Window/Touch.hpp
 SFML/Window/Export.hpp
 -
 SFML/System/Vector2.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/VideoMode.hpp
+../SFML-2.4.2/include/SFML/Window/VideoMode.hpp
 SFML/Window/Export.hpp
 -
 vector
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/Window.hpp
+../SFML-2.4.2/include/SFML/Window/Window.hpp
 SFML/Window/Export.hpp
 -
 SFML/Window/ContextSettings.hpp
@@ -634,17 +634,17 @@ SFML/System/NonCopyable.hpp
 SFML/System/String.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/WindowHandle.hpp
+../SFML-2.4.2/include/SFML/Window/WindowHandle.hpp
 SFML/Config.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include/SFML/Window/WindowStyle.hpp
+../SFML-2.4.2/include/SFML/Window/WindowStyle.hpp
 
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.cpp
+/home/oleg/CLionProject/simple_RTS/AbstractScene.cpp
 AbstractScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
 SFML/System/Time.hpp
 -
 unordered_map
@@ -658,17 +658,29 @@ fstream
 iostream
 -
 InterfaseScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 iterator
 -
-map
+
+/home/oleg/CLionProject/simple_RTS/ControllerScene.cpp
+ControllerScene.h
+/home/oleg/CLionProject/simple_RTS/ControllerScene.h
+
+/home/oleg/CLionProject/simple_RTS/ControllerScene.h
+InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
+AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
+PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
+random
 -
 
-/home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.cpp
+/home/oleg/CLionProject/simple_RTS/DrawScene.cpp
 DrawScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.h
+/home/oleg/CLionProject/simple_RTS/DrawScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.h
+/home/oleg/CLionProject/simple_RTS/DrawScene.h
 SFML/Graphics.hpp
 -
 iostream
@@ -676,33 +688,33 @@ iostream
 unordered_map
 -
 InterfaseScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 AbstractScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.cpp
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.cpp
 InterfaseScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.cpp
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.cpp
 PhisicalScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
 
-/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
 SFML/System/Time.hpp
 -
 unordered_map
 -
 InterfaseScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 AbstractScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
 SFML/Graphics/Rect.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS_рисующее/main.cpp
+/home/oleg/CLionProject/simple_RTS/main.cpp
 SFML/System/Time.hpp
 -
 SFML/Graphics.hpp
@@ -711,14 +723,12 @@ iostream
 -
 fstream
 -
-string
--
-unordered_map
--
 AbstractScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
 PhisicalScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
 DrawScene.h
-/home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.h
+/home/oleg/CLionProject/simple_RTS/DrawScene.h
+ControllerScene.h
+/home/oleg/CLionProject/simple_RTS/ControllerScene.h
 

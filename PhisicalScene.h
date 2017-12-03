@@ -76,7 +76,7 @@ protected:
 class PhisicalTank: public PhisicalObject{
 public:
     PhisicalTank(const int id, const int heigth, const int width, int speed):
-        PhisicalObject(id, heigth, width, speed){
+        PhisicalObject(id, heigth, width, speed), recently_collided(false){
         std::cout << "конструктор физического танка"<<std::endl;
     };
     ~PhisicalTank(){};
@@ -104,7 +104,13 @@ protected:
         std::cout << "новые координаты танка " << point.x << ", " << point.y;
         abstract_tank->set_point(point);
     };
+    // "недавно столкнулся" требуется в сцене искуственного интеллекта
+    bool recently_collided;
 public:
+    bool did_collided(){
+        return recently_collided;
+    }
+
     void make_damage(AbstractScene *abstract_scene){
         AbstractObject * abstract_object = abstract_scene->obj_list[id];
         AbstrTank *abstract_tank = dynamic_cast<AbstrTank *>(abstract_object);
@@ -140,11 +146,13 @@ public:
             //ROFL! При первых тестах танк не двигался - сталкивался сам с собой
             bool is_intersect = i.second->now_rectangle(abstract_scene).intersects(future_rectangle) && i.first != id;
             if (is_intersect){
+                this->recently_collided = true; //Это для AITank.
                 //нет урона при наезде танка
                 std::cout << "танк столкнулся c " << abstract_scene->accord_list[i.first] << "\n";
                 return;
             }
         }
+        this->recently_collided = false; //Это для AITank.
         move(abstract_scene);
     };
 };
@@ -249,7 +257,7 @@ public:
     void handle_tick(AbstractScene *abstract_scene, std::unordered_map <int, PhisicalObject*> *object_list){}; // тупо стоит на месте
 };
 
-class PhisicalScene: public InterfaceScene{
+class PhisicalScene: public InterfaseScene{
 public:
     PhisicalScene(){
         //края карты - фиктивные объекты, неуничтожимые и невидимые, не имеющие абстрактного отобра
@@ -284,7 +292,7 @@ public:
         } else if(type == "WaterBlock") {
 
         } else if(type == "HeadquartersBlock") {
-
+            //object_list[id] = new PhisicalBlock(id, 16*3, 16*3);
         }
     }
 

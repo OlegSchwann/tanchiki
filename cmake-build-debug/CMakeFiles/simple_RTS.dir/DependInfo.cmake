@@ -4,17 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/oleg/CLionProject/simple_RTS_рисующее/AbstractScene.cpp" "/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o"
-  "/home/oleg/CLionProject/simple_RTS_рисующее/DrawScene.cpp" "/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/simple_RTS.dir/DrawScene.cpp.o"
-  "/home/oleg/CLionProject/simple_RTS_рисующее/InterfaseScene.cpp" "/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o"
-  "/home/oleg/CLionProject/simple_RTS_рисующее/PhisicalScene.cpp" "/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o"
-  "/home/oleg/CLionProject/simple_RTS_рисующее/main.cpp" "/home/oleg/CLionProject/simple_RTS_рисующее/cmake-build-debug/CMakeFiles/simple_RTS.dir/main.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/AbstractScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/ControllerScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/DrawScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/DrawScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/InterfaseScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/PhisicalScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/main.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/include"
+  "../SFML-2.4.2/include"
   )
 
 # Targets to which this target links.

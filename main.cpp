@@ -18,11 +18,11 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <unordered_map>
 #include "AbstractScene.h"
 #include "PhisicalScene.h"
 #include "DrawScene.h"
+#include "ControllerScene.h"
+
 // вся графическая подсистема
 // кусочек для теста, пример как пользоваться
 
@@ -42,15 +42,16 @@ int main()
     file.close();
 
     DrawScene draw_scene;
-    //забирает измемения из абстрактной сцены
+    AIScene ai_scene;
+
 
     //задача нарисовать танк
     abstract_scene.add_obj(7*8*3, 24*8*3, "Tank");
-    abstract_scene.add_obj(7*8*3, 16*8*3, "Bullet");
     draw_scene.synchronize(&abstract_scene);
 
     PhisicalScene phisical_scene;
     phisical_scene.synchronize(&abstract_scene);
+    ai_scene.synchronize(&abstract_scene);
     // все подготовительные действия
     // минимальная длительность игрового цикла
     sf::Time cycle_time = sf::seconds(0.05);//0.02f);
@@ -60,13 +61,15 @@ int main()
     sf::Event event;
     while (window.isOpen()){
         while (window.pollEvent(event)){
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) { };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){ };
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){ };
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){ };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){ };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) { };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){ };
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        ai_scene.handle_tick_all_AI(&abstract_scene, &phisical_scene);
         phisical_scene.handle_tick_all_objects(&abstract_scene);
         abstract_scene.clear_dead();
         draw_scene.synchronize(&abstract_scene);
