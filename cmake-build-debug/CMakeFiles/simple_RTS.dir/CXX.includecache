@@ -645,7 +645,7 @@ AbstractScene.h
 /home/oleg/CLionProject/simple_RTS/AbstractScene.h
 
 /home/oleg/CLionProject/simple_RTS/AbstractScene.h
-SFML/System/Time.hpp
+SFML/System/Clock.hpp
 -
 unordered_map
 -
@@ -714,6 +714,18 @@ AbstractScene.h
 SFML/Graphics/Rect.hpp
 -
 
+/home/oleg/CLionProject/simple_RTS/PleerController.cpp
+PleerController.h
+/home/oleg/CLionProject/simple_RTS/PleerController.h
+
+/home/oleg/CLionProject/simple_RTS/PleerController.h
+InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
+AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
+PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
+
 /home/oleg/CLionProject/simple_RTS/main.cpp
 SFML/System/Time.hpp
 -
@@ -731,4 +743,6 @@ DrawScene.h
 /home/oleg/CLionProject/simple_RTS/DrawScene.h
 ControllerScene.h
 /home/oleg/CLionProject/simple_RTS/ControllerScene.h
+PleerController.h
+/home/oleg/CLionProject/simple_RTS/PleerController.h
 

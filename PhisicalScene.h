@@ -63,8 +63,14 @@ public:
     virtual void handle_tick(AbstractScene *abstract_scene,  std::unordered_map <int, PhisicalObject*> *object_list) = 0;
     // мы храним скорость по модулю в физической части, a направление в абстрактной
     // потому нужен доступ к атрибутам отображения этого объекта в абстрактной сцене
+    void set_speed(int speed){
+        this->speed = speed;
+    }
+    int get_speed(){
+        return this->speed;
+    }
 protected:
-    const int speed;
+    int speed;
     // у блоков = 0 и не используется
     // действительно движущиеся объекты содержат direct в абстрактном классе
     const int width; // по x, горизонтально
@@ -77,7 +83,7 @@ class PhisicalTank: public PhisicalObject{
 public:
     PhisicalTank(const int id, const int heigth, const int width, int speed):
         PhisicalObject(id, heigth, width, speed), recently_collided(false){
-        std::cout << "конструктор физического танка"<<std::endl;
+        //std::cout << "конструктор физического танка"<<std::endl;
     };
     ~PhisicalTank(){};
 protected:
@@ -101,7 +107,7 @@ protected:
                 point.x += speed;
                 break;
         }
-        std::cout << "новые координаты танка " << point.x << ", " << point.y;
+        //std::cout << "новые координаты танка " << point.x << ", " << point.y;
         abstract_tank->set_point(point);
     };
     // "недавно столкнулся" требуется в сцене искуственного интеллекта
@@ -225,7 +231,8 @@ public:
                 // пуля нанесла урон в двух
                 i.second->make_damage(abstract_scene);
                 make_damage(abstract_scene);
-                std::cout << "Пуля столкнулась, здоровье = " << abstract_scene->obj_list[i.first]->get_health() << "\n";
+                std::cout << "Пуля столкнулась с " << abstract_scene->accord_list[i.first] <<
+                        ", здоровье = " << abstract_scene->obj_list[i.first]->get_health() << "\n";
                 return;
             }
         }
@@ -285,7 +292,9 @@ public:
             object_list[id] = new PhisicalBullet(id, 4*3, 4*3, 10);
             //TODO: подобрать скорость
         } else if(type == "Tank") {
-            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 5);
+            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 3);
+        } else if(type == "PleerTank") {
+            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 3);
             //TODO: подобрать скорость
         } else if(type == "Board") {
             //нужен край карты

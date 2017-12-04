@@ -9,7 +9,6 @@
 #define UP 2
 #define LEFT 3
 
-
 struct Point{ //точка, возвращаемая абстрактным классом для отрисовки текстуры
     int x;
     int y;

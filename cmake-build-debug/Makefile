@@ -261,6 +261,33 @@ PhisicalScene.cpp.s:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.s
 .PHONY : PhisicalScene.cpp.s
 
+PleerController.o: PleerController.cpp.o
+
+.PHONY : PleerController.o
+
+# target to build an object file
+PleerController.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.o
+.PHONY : PleerController.cpp.o
+
+PleerController.i: PleerController.cpp.i
+
+.PHONY : PleerController.i
+
+# target to preprocess a source file
+PleerController.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.i
+.PHONY : PleerController.cpp.i
+
+PleerController.s: PleerController.cpp.s
+
+.PHONY : PleerController.s
+
+# target to generate assembly for a file
+PleerController.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.s
+.PHONY : PleerController.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -312,6 +339,9 @@ help:
 	@echo "... PhisicalScene.o"
 	@echo "... PhisicalScene.i"
 	@echo "... PhisicalScene.s"
+	@echo "... PleerController.o"
+	@echo "... PleerController.i"
+	@echo "... PleerController.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

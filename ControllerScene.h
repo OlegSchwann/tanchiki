@@ -1,7 +1,15 @@
 //
 // Created by oleg on 01.12.17.
-// Сцена обработки поведения врагов
-
+// Сцена обработки поведения танков
+// задача на эту ночь - замкнуть игру на себя
+//create_player();
+//string& get_nickname();
+//void add_kill();
+//erase_player();
+//add_player(cosnt string& nickname);
+//erase_player(const string& nickname);
+//int resolve(const string& nickname);
+//void add_kill();
 
 #ifndef SIMPLE_RTS_AISCENE_H
 #define SIMPLE_RTS_AISCENE_H
@@ -27,7 +35,6 @@ public:
 class AITank: public AIObject{
     //AbstractTank содержит id, init_point, dir, health
     //PhisicalTank содержит id, heigth, width, speed
-    //TODO: ввести bool recently_collided
 public:
     AITank(int id):AIObject(id){
 

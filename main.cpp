@@ -22,6 +22,7 @@
 #include "PhisicalScene.h"
 #include "DrawScene.h"
 #include "ControllerScene.h"
+#include "PleerController.h"
 
 // вся графическая подсистема
 // кусочек для теста, пример как пользоваться
@@ -41,42 +42,54 @@ int main()
     abstract_scene.load_map(file);
     file.close();
 
+    abstract_scene.add_obj(0, 0 ,"Tank");
+
     DrawScene draw_scene;
     AIScene ai_scene;
-
-
-    //задача нарисовать танк
-    abstract_scene.add_obj(7*8*3, 24*8*3, "Tank");
-    draw_scene.synchronize(&abstract_scene);
-
+    PleerController pleer_controller;
     PhisicalScene phisical_scene;
+    draw_scene.synchronize(&abstract_scene);
     phisical_scene.synchronize(&abstract_scene);
     ai_scene.synchronize(&abstract_scene);
+
     // все подготовительные действия
     // минимальная длительность игрового цикла
-    sf::Time cycle_time = sf::seconds(0.05);//0.02f);
+    sf::Time cycle_time = sf::seconds(0.02);//0.02f);
     sf::RenderWindow window(sf::VideoMode(624, 624), "simple rts");
 
     sf::Clock clock;
     sf::Event event;
     while (window.isOpen()){
         while (window.pollEvent(event)){
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){ };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){ };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){ };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) { };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){ };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+                pleer_controller.set_doun();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+                pleer_controller.set_right();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+                pleer_controller.set_up();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+                pleer_controller.set_left();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                pleer_controller.choot(&abstract_scene);
+                std::cout << "сделан выстрел" << std::endl;
+            };
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        //пришлось дать знать рисующей сцене о абстрактной сцене. Это нужно, что бы получать х, y отображения этого объекта.
         ai_scene.handle_tick_all_AI(&abstract_scene, &phisical_scene);
         phisical_scene.handle_tick_all_objects(&abstract_scene);
         abstract_scene.clear_dead();
         draw_scene.synchronize(&abstract_scene);
         phisical_scene.synchronize(&abstract_scene);
-        window.clear();
+        pleer_controller.manage_tank(&abstract_scene, &phisical_scene);
+        ai_scene.synchronize(&abstract_scene);
         //выводим все спрайты на экран
-        //пришлось дать знать рисующей сцене о абстрактной сцене. Это нужно, что бы получать х, y отображения этого объекта.
+        window.clear();
         draw_scene.draw(window, &abstract_scene);
         window.display();
         sf::Time elapsed_time = clock.getElapsedTime() % cycle_time;

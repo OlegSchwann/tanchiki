@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/oleg/CLionProject/simple_RTS/DrawScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/DrawScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/InterfaseScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/PhisicalScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o"
+  "/home/oleg/CLionProject/simple_RTS/PleerController.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/PleerController.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/main.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

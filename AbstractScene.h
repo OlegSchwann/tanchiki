@@ -5,7 +5,7 @@
 #ifndef SIMPLE_RTS_ABSTRACTSCENE_H
 #define SIMPLE_RTS_ABSTRACTSCENE_H
 
-#include <SFML/System/Time.hpp>
+#include <SFML/System/Clock.hpp>
 #include <unordered_map>
 #include <vector>
 #include <string>
@@ -72,11 +72,9 @@ public:
             Directable(dir)
     {
         std::cout << "конструктор танка\n";
-        //реализовать время последнего выстрела - сейчас
-        //last_shoot(last_shoot)
-        //sf::Time last_shoot = sf::seconds(0.0)
     };
     ~AbstrTank(){};
+    //премя последнего выстрела - используется в "create_abctract_bullet" для проерки допустимости выстрела
     sf::Time last_shoot;
     //написать get_obj
 };
@@ -133,7 +131,7 @@ public:
     }
     std::unordered_map <int , std::string> accord_list;
     std::unordered_map <int, AbstractObject*> obj_list;
-    void add_obj(const int x,const int y, const std::string& type, int dir=UP)
+    int add_obj(const int x,const int y, const std::string& type, int dir=UP)
     {
         accord_list[count_id] = type;
         if(type == "DistrBlock") {
@@ -144,12 +142,14 @@ public:
             obj_list[count_id] = new AbstrBullet(count_id, Point{x, y}, dir, 1);
         } else if(type == "Tank") {
             obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, dir, 1);
+        } else if(type == "PleerTank") { //отличие только в том, что не создаётся AI_tank
+            obj_list[count_id] = new AbstrTank(count_id, Point{x, y}, dir, 1);
         } else if(type == "WaterBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "HeadquartersBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1);
         }
-        count_id++;
+        return count_id++;
     }
 
     //функция, очищающая список объектов от убитых с health <= 0
@@ -210,26 +210,34 @@ public:
     }
 
     ~AbstractScene(){};
-
+private:
+    sf::Clock clock;
+public:
     //функция, создающая пулю около этого танка с учётом направления дула танка
     void create_abctract_bullet(int id){
         //напоминание: танк 15*3 на 15*3
         //пуля 4*3 на 4*3
         AbstrTank *abstract_tank = dynamic_cast<AbstrTank *>(this->obj_list[id]);
         Point point = abstract_tank->get_point();
-        switch(abstract_tank->get_dir()) {
-            case DOWN:  // ⍗
-                add_obj(point.x + 16, point.y + 45, "Bullet", DOWN);
-                break;
-            case RIGHT: // ⍈
-                add_obj(point.x + 45, point.y + 16, "Bullet", RIGHT);
-                break;
-            case UP:    // ⍐
-                add_obj(point.x + 16, point.y - 12, "Bullet", UP);
-                break;
-            case LEFT:  // ⍇
-                add_obj(point.x - 12, point.y + 16, "Bullet", LEFT);
-                break;
+        sf::Time now = clock.getElapsedTime();
+        if(now - abstract_tank->last_shoot > sf::seconds(0.5)) {
+            abstract_tank->last_shoot = now;
+
+            switch (abstract_tank->get_dir()) {
+                case DOWN:  // ⍗
+                    add_obj(point.x + 16, point.y + 45, "Bullet", DOWN);
+                    break;
+                case RIGHT: // ⍈
+                    add_obj(point.x + 45, point.y + 16, "Bullet", RIGHT);
+                    break;
+                case UP:    // ⍐
+                    add_obj(point.x + 16, point.y - 12, "Bullet", UP);
+                    break;
+                case LEFT:  // ⍇
+                    add_obj(point.x - 12, point.y + 16, "Bullet", LEFT);
+                    break;
+            }
+            std::cout << "Создали пулю\n" << std::endl;
         }
     }
 

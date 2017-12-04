@@ -15,7 +15,7 @@
 class DrawObject: public InterfaseObject{
 public:
     DrawObject(int id, sf::Sprite * sprite):InterfaseObject(id), sprite(sprite){};
-    sf::Sprite * sprite = NULL; // основной рисуемый объект
+    sf::Sprite * sprite = nullptr; // основной рисуемый объект
     virtual void draw(sf::RenderWindow &window, AbstractScene *abstract_scene) = 0; //сам объект не имеет смысла, это интерфейс.
     ~DrawObject(){
         // все картинки инициализируются и хранятся в сцене, и в ней же уничтожаются в деструкторе, что бы избежать дублирования.
@@ -306,7 +306,15 @@ public:
         } else if (type == "HeadquartersBlock") {
             object_list[id] = new DrawBlock(id, &iliving_headquarters_sprite);
         } else if (type == "Tank") {
-            object_list[id] = new DrawTank(id, &tank_up_sprite, &tank_down_sprite, &tank_right_sprite, &tank_left_sprite);
+            object_list[id] = new DrawTank(id, &tank_up_sprite,
+                                               &tank_down_sprite,
+                                               &tank_right_sprite,
+                                               &tank_left_sprite);
+        } else if (type == "PleerTank") {
+            object_list[id] = new DrawTank(id, &tank_up_sprite, //TODO: другие текстуры игроку
+                                               &tank_down_sprite,
+                                               &tank_right_sprite,
+                                               &tank_left_sprite);
         } else if (type == "Bullet") {
             object_list[id] = new DrawBullet(id, &bullet_up_sprite, &bullet_down_sprite,
                                                  &bullet_right_sprite, &bullet_left_sprite);
