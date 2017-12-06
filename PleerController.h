@@ -24,9 +24,16 @@ public:
     PleerController():tank_id(-1), // заведомо некорректное значение
                       pleer_halse(6),
                       direct(UP),
-                      since_last_click(30){ // пусть стоит
+                      since_last_click(30),
+                      start_x(0),
+                      start_y(0){ // пусть стоит
 
     };
+    void set_startXY(int x, int y){
+        start_x = x;
+        start_y = y;
+    }
+
     ~PleerController(){};
     void set_up(){
         direct = UP;
@@ -71,8 +78,8 @@ public:
             pleer_halse--;
             //if(){} TODO: завершение игры тут
             //создаём танк
-            std::cout << "Я тут!" << std::endl;
-            this->tank_id = abstract_scene->add_obj(7*8*3, 24*8*3, "PleerTank");
+            std::cout << "Танк игрока был возрождён, осталось жизней: " << pleer_halse << "\n";
+            this->tank_id = abstract_scene->add_obj(start_x, start_y, "PleerTank");
             since_last_click = 30; //пусть стоит на старте
         }
         since_last_click ++;
@@ -87,6 +94,7 @@ private:
     //счётчик "когда последнее обновление", если > 10 то скорость устанавливается в 0.
     // мне кажется, это не заморочки физической части
     int since_last_click;
+    int start_x, start_y;
 };
 
 #endif //SIMPLE_RTS_PLEERCONTROLLER_H

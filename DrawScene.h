@@ -171,20 +171,24 @@ public:
             phase(0){
     };
     void draw(sf::RenderWindow &window, AbstractScene *abstract_scene){
-        switch (phase / 20){
+        switch (phase / 10){
             case 0:
                 sprite = explosion_1;
+                break;
             case 1:
                 sprite = explosion_2;
+                break;
             case 2:
                 sprite = explosion_3;
+                break;
         }
         Point point = abstract_scene->Get_point(id);
         sprite->setPosition(point.x, point.y);
         window.draw(*sprite);
         phase++;
-        if (phase == 60){
+        if (phase > 30){
             //надо вызвать удаление этого объекта и его отображения в абстрактном классе.
+            (abstract_scene->obj_list[id])->set_health(0);
         }
     };
 
@@ -212,6 +216,11 @@ public:
     sf::Sprite  tank_down_sprite;
     sf::Sprite  tank_right_sprite;
     sf::Sprite  tank_left_sprite;
+    //вражеский танк
+    sf::Sprite  tank_up_sprite2;
+    sf::Sprite  tank_down_sprite2;
+    sf::Sprite  tank_right_sprite2;
+    sf::Sprite  tank_left_sprite2;
     //пуля
     sf::Sprite  bullet_up_sprite;
     sf::Sprite  bullet_down_sprite;
@@ -224,8 +233,6 @@ public:
 
     DrawScene(){
         all_image.loadFromFile("/home/oleg/CLionProject/simple_RTS/60016.png");
-        //вырезаем чёрный цвет, делая эту часть прозрачной
-        all_image.createMaskFromColor(sf::Color(0, 0, 0));
         all_texture.loadFromImage(all_image);
         block_sprite.setTexture(all_texture);
         block_sprite.setTextureRect(sf::IntRect(256, 0, 8, 8));
@@ -246,22 +253,38 @@ public:
         dead_headquarters_sprite.setTexture(all_texture);
         dead_headquarters_sprite.setTextureRect(sf::IntRect(320, 32, 16, 16));
         dead_headquarters_sprite.scale(3, 3); // да
-
+        // танк игрока
         tank_up_sprite.setTexture(all_texture);
-        tank_up_sprite.setTextureRect(sf::IntRect(0, 1, 15, 15));
+        tank_up_sprite.setTextureRect(sf::IntRect(1, 2, 13, 13));
         tank_up_sprite.scale(3, 3);
 
         tank_down_sprite.setTexture(all_texture);
-        tank_down_sprite.setTextureRect(sf::IntRect(64, 0, 15, 15));
+        tank_down_sprite.setTextureRect(sf::IntRect(65, 1, 13, 13));
         tank_down_sprite.scale(3, 3);
 
         tank_right_sprite.setTexture(all_texture);
-        tank_right_sprite.setTextureRect(sf::IntRect(97, 0, 15, 15));
+        tank_right_sprite.setTextureRect(sf::IntRect(97, 1, 13, 13));
         tank_right_sprite.scale(3, 3);
 
         tank_left_sprite.setTexture(all_texture);
-        tank_left_sprite.setTextureRect(sf::IntRect(33, 0, 15, 15));
+        tank_left_sprite.setTextureRect(sf::IntRect(34, 1, 13, 13));
         tank_left_sprite.scale(3, 3);
+        // танки врагов
+        tank_up_sprite2.setTexture(all_texture);
+        tank_up_sprite2.setTextureRect(sf::IntRect(1, 160, 13, 15));
+        tank_up_sprite2.scale(3, 3);
+
+        tank_down_sprite2.setTexture(all_texture);
+        tank_down_sprite2.setTextureRect(sf::IntRect(65, 161, 13, 15));
+        tank_down_sprite2.scale(3, 3);
+
+        tank_right_sprite2.setTexture(all_texture);
+        tank_right_sprite2.setTextureRect(sf::IntRect(97, 161, 15, 13));
+        tank_right_sprite2.scale(3, 3);
+
+        tank_left_sprite2.setTexture(all_texture);
+        tank_left_sprite2.setTextureRect(sf::IntRect(33, 161, 15, 13));
+        tank_left_sprite2.scale(3, 3);
 
         bullet_up_sprite.setTexture(all_texture);
         bullet_up_sprite.setTextureRect(sf::IntRect(323, 102, 3, 4));
@@ -306,19 +329,23 @@ public:
         } else if (type == "HeadquartersBlock") {
             object_list[id] = new DrawBlock(id, &iliving_headquarters_sprite);
         } else if (type == "Tank") {
-            object_list[id] = new DrawTank(id, &tank_up_sprite,
-                                               &tank_down_sprite,
-                                               &tank_right_sprite,
-                                               &tank_left_sprite);
+            object_list[id] = new DrawTank(id, &tank_up_sprite2,
+                                               &tank_down_sprite2,
+                                               &tank_right_sprite2,
+                                               &tank_left_sprite2);
         } else if (type == "PleerTank") {
-            object_list[id] = new DrawTank(id, &tank_up_sprite, //TODO: другие текстуры игроку
+            object_list[id] = new DrawTank(id, &tank_up_sprite,
                                                &tank_down_sprite,
                                                &tank_right_sprite,
                                                &tank_left_sprite);
         } else if (type == "Bullet") {
             object_list[id] = new DrawBullet(id, &bullet_up_sprite, &bullet_down_sprite,
                                                  &bullet_right_sprite, &bullet_left_sprite);
+        } else if (type == "Explosion") {
+            object_list[id] = new DrawExplosion(id, &explosion_1, &explosion_2, &explosion_3);
         }
+
+
     }
 
     void synchronize(AbstractScene *abstract_scene){

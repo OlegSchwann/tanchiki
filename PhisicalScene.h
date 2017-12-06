@@ -92,7 +92,7 @@ protected:
         AbstrTank *abstract_tank = dynamic_cast<AbstrTank *>(abstract_object);
         Point point = abstract_tank->get_point();
         int direct = abstract_tank->get_dir();
-        std::cout << "координаты танка " << point.x << ", " << point.y;
+        //std::cout << "координаты танка " << point.x << ", " << point.y;
         switch (direct){
             case UP:
                 point.y -= speed;
@@ -175,7 +175,7 @@ protected:
         AbstractObject * abstract_object = abstract_scene->obj_list[id];
         AbstrBullet *abstract_bullet = dynamic_cast<AbstrBullet *>(abstract_object);
         Point point = abstract_bullet->get_point();
-        std::cout << "Координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
+        //std::cout << "Координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
         int direct = abstract_bullet->get_dir();
         switch (direct){
             case UP:
@@ -192,7 +192,7 @@ protected:
                 break;
         }
         abstract_bullet->set_point(point);
-        std::cout << "новые координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
+        //std::cout << "новые координаты PhisicalBullet " << point.x << ", " << point.y << "\n";
     };
 public:
     void make_damage(AbstractScene *abstract_scene){
@@ -290,12 +290,10 @@ public:
             object_list[id] = new UnDistrPhisicalBlock(id, 8*3, 8*3);
         } else if(type == "Bullet") {
             object_list[id] = new PhisicalBullet(id, 4*3, 4*3, 10);
-            //TODO: подобрать скорость
         } else if(type == "Tank") {
             object_list[id] = new PhisicalTank(id, 15*3, 15*3, 3);
         } else if(type == "PleerTank") {
-            object_list[id] = new PhisicalTank(id, 15*3, 15*3, 3);
-            //TODO: подобрать скорость
+            object_list[id] = new PhisicalTank(id, 13*3, 13*3, 3);
         } else if(type == "Board") {
             //нужен край карты
         } else if(type == "WaterBlock") {

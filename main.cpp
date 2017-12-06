@@ -21,7 +21,7 @@
 #include "AbstractScene.h"
 #include "PhisicalScene.h"
 #include "DrawScene.h"
-#include "ControllerScene.h"
+#include "AIScene.h"
 #include "PleerController.h"
 
 // вся графическая подсистема
@@ -42,11 +42,12 @@ int main()
     abstract_scene.load_map(file);
     file.close();
 
-    abstract_scene.add_obj(0, 0 ,"Tank");
-
     DrawScene draw_scene;
     AIScene ai_scene;
     PleerController pleer_controller;
+    pleer_controller.set_startXY(16*3*8, 24*3*8);
+    PleerController pleer_controller2;
+    pleer_controller2.set_startXY(8*3*8, 24*3*8);
     PhisicalScene phisical_scene;
     draw_scene.synchronize(&abstract_scene);
     phisical_scene.synchronize(&abstract_scene);
@@ -77,6 +78,24 @@ int main()
                 pleer_controller.choot(&abstract_scene);
                 std::cout << "сделан выстрел" << std::endl;
             };
+            //2 игрок
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+                pleer_controller2.set_doun();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
+                pleer_controller2.set_right();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
+                pleer_controller2.set_up();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+                pleer_controller2.set_left();
+            };
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
+                pleer_controller2.choot(&abstract_scene);
+                std::cout << "сделан выстрел" << std::endl;
+            };
+
             if (event.type == sf::Event::Closed)
                 window.close();
         }
@@ -87,14 +106,18 @@ int main()
         draw_scene.synchronize(&abstract_scene);
         phisical_scene.synchronize(&abstract_scene);
         pleer_controller.manage_tank(&abstract_scene, &phisical_scene);
+        pleer_controller2.manage_tank(&abstract_scene, &phisical_scene);
         ai_scene.synchronize(&abstract_scene);
         //выводим все спрайты на экран
         window.clear();
         draw_scene.draw(window, &abstract_scene);
         window.display();
         sf::Time elapsed_time = clock.getElapsedTime() % cycle_time;
-        std::cout << "отрисовано за " << elapsed_time.asMilliseconds() << " миллисекунд\n";
+        //std::cout << "отрисовано за " << elapsed_time.asMilliseconds() << " миллисекунд\n";
         sf::sleep(cycle_time - elapsed_time);
     }
     return 0;
 }
+
+// Я не могу весь проект в одиночку делать 😭
+// Но я очень хочу закончить курс с сертификатом. Я всю учёбу запустил ради этого. Пожалуйста!

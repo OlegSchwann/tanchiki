@@ -86,16 +86,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/AIScene.cpp">
+			<Option target="simple_RTS"/>
+		</Unit>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/AIScene.h">
+			<Option target="simple_RTS"/>
+		</Unit>
 		<Unit filename="/home/oleg/CLionProject/simple_RTS/AbstractScene.cpp">
 			<Option target="simple_RTS"/>
 		</Unit>
 		<Unit filename="/home/oleg/CLionProject/simple_RTS/AbstractScene.h">
-			<Option target="simple_RTS"/>
-		</Unit>
-		<Unit filename="/home/oleg/CLionProject/simple_RTS/ControllerScene.cpp">
-			<Option target="simple_RTS"/>
-		</Unit>
-		<Unit filename="/home/oleg/CLionProject/simple_RTS/ControllerScene.h">
 			<Option target="simple_RTS"/>
 		</Unit>
 		<Unit filename="/home/oleg/CLionProject/simple_RTS/DrawScene.cpp">

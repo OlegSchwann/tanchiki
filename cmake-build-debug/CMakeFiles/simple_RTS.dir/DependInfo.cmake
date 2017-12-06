@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/oleg/CLionProject/simple_RTS/AIScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/AIScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/AbstractScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o"
-  "/home/oleg/CLionProject/simple_RTS/ControllerScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/DrawScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/DrawScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/InterfaseScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o"
   "/home/oleg/CLionProject/simple_RTS/PhisicalScene.cpp" "/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o"

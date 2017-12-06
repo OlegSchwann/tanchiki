@@ -180,28 +180,28 @@ CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o.provides: CMakeFiles/simple_RTS.di
 CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o.provides.build: CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o
 
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o: CMakeFiles/simple_RTS.dir/flags.make
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o: ../ControllerScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o -c /home/oleg/CLionProject/simple_RTS/ControllerScene.cpp
+CMakeFiles/simple_RTS.dir/AIScene.cpp.o: CMakeFiles/simple_RTS.dir/flags.make
+CMakeFiles/simple_RTS.dir/AIScene.cpp.o: ../AIScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/CLionProject/simple_RTS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simple_RTS.dir/AIScene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple_RTS.dir/AIScene.cpp.o -c /home/oleg/CLionProject/simple_RTS/AIScene.cpp
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_RTS.dir/ControllerScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/CLionProject/simple_RTS/ControllerScene.cpp > CMakeFiles/simple_RTS.dir/ControllerScene.cpp.i
+CMakeFiles/simple_RTS.dir/AIScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_RTS.dir/AIScene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/CLionProject/simple_RTS/AIScene.cpp > CMakeFiles/simple_RTS.dir/AIScene.cpp.i
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_RTS.dir/ControllerScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/CLionProject/simple_RTS/ControllerScene.cpp -o CMakeFiles/simple_RTS.dir/ControllerScene.cpp.s
+CMakeFiles/simple_RTS.dir/AIScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_RTS.dir/AIScene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/CLionProject/simple_RTS/AIScene.cpp -o CMakeFiles/simple_RTS.dir/AIScene.cpp.s
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.requires:
+CMakeFiles/simple_RTS.dir/AIScene.cpp.o.requires:
 
-.PHONY : CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.requires
+.PHONY : CMakeFiles/simple_RTS.dir/AIScene.cpp.o.requires
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.provides: CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.requires
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.provides.build
-.PHONY : CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.provides
+CMakeFiles/simple_RTS.dir/AIScene.cpp.o.provides: CMakeFiles/simple_RTS.dir/AIScene.cpp.o.requires
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AIScene.cpp.o.provides.build
+.PHONY : CMakeFiles/simple_RTS.dir/AIScene.cpp.o.provides
 
-CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.provides.build: CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o
+CMakeFiles/simple_RTS.dir/AIScene.cpp.o.provides.build: CMakeFiles/simple_RTS.dir/AIScene.cpp.o
 
 
 CMakeFiles/simple_RTS.dir/PleerController.cpp.o: CMakeFiles/simple_RTS.dir/flags.make
@@ -235,7 +235,7 @@ simple_RTS_OBJECTS = \
 "CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o" \
 "CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o" \
 "CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o" \
-"CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o" \
+"CMakeFiles/simple_RTS.dir/AIScene.cpp.o" \
 "CMakeFiles/simple_RTS.dir/PleerController.cpp.o"
 
 # External object files for target simple_RTS
@@ -246,7 +246,7 @@ simple_RTS: CMakeFiles/simple_RTS.dir/DrawScene.cpp.o
 simple_RTS: CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o
 simple_RTS: CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o
 simple_RTS: CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o
-simple_RTS: CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o
+simple_RTS: CMakeFiles/simple_RTS.dir/AIScene.cpp.o
 simple_RTS: CMakeFiles/simple_RTS.dir/PleerController.cpp.o
 simple_RTS: CMakeFiles/simple_RTS.dir/build.make
 simple_RTS: CMakeFiles/simple_RTS.dir/link.txt
@@ -263,7 +263,7 @@ CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/DrawScene.cpp.o.re
 CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/AbstractScene.cpp.o.requires
 CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/InterfaseScene.cpp.o.requires
 CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o.requires
-CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o.requires
+CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/AIScene.cpp.o.requires
 CMakeFiles/simple_RTS.dir/requires: CMakeFiles/simple_RTS.dir/PleerController.cpp.o.requires
 
 .PHONY : CMakeFiles/simple_RTS.dir/requires

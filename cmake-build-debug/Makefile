@@ -126,6 +126,33 @@ simple_RTS/fast:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/build
 .PHONY : simple_RTS/fast
 
+AIScene.o: AIScene.cpp.o
+
+.PHONY : AIScene.o
+
+# target to build an object file
+AIScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AIScene.cpp.o
+.PHONY : AIScene.cpp.o
+
+AIScene.i: AIScene.cpp.i
+
+.PHONY : AIScene.i
+
+# target to preprocess a source file
+AIScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AIScene.cpp.i
+.PHONY : AIScene.cpp.i
+
+AIScene.s: AIScene.cpp.s
+
+.PHONY : AIScene.s
+
+# target to generate assembly for a file
+AIScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AIScene.cpp.s
+.PHONY : AIScene.cpp.s
+
 AbstractScene.o: AbstractScene.cpp.o
 
 .PHONY : AbstractScene.o
@@ -152,33 +179,6 @@ AbstractScene.s: AbstractScene.cpp.s
 AbstractScene.cpp.s:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/AbstractScene.cpp.s
 .PHONY : AbstractScene.cpp.s
-
-ControllerScene.o: ControllerScene.cpp.o
-
-.PHONY : ControllerScene.o
-
-# target to build an object file
-ControllerScene.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/ControllerScene.cpp.o
-.PHONY : ControllerScene.cpp.o
-
-ControllerScene.i: ControllerScene.cpp.i
-
-.PHONY : ControllerScene.i
-
-# target to preprocess a source file
-ControllerScene.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/ControllerScene.cpp.i
-.PHONY : ControllerScene.cpp.i
-
-ControllerScene.s: ControllerScene.cpp.s
-
-.PHONY : ControllerScene.s
-
-# target to generate assembly for a file
-ControllerScene.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/ControllerScene.cpp.s
-.PHONY : ControllerScene.cpp.s
 
 DrawScene.o: DrawScene.cpp.o
 
@@ -324,12 +324,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simple_RTS"
+	@echo "... AIScene.o"
+	@echo "... AIScene.i"
+	@echo "... AIScene.s"
 	@echo "... AbstractScene.o"
 	@echo "... AbstractScene.i"
 	@echo "... AbstractScene.s"
-	@echo "... ControllerScene.o"
-	@echo "... ControllerScene.i"
-	@echo "... ControllerScene.s"
 	@echo "... DrawScene.o"
 	@echo "... DrawScene.i"
 	@echo "... DrawScene.s"

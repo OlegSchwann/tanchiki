@@ -640,6 +640,20 @@ SFML/Config.hpp
 
 ../SFML-2.4.2/include/SFML/Window/WindowStyle.hpp
 
+/home/oleg/CLionProject/simple_RTS/AIScene.cpp
+AIScene.h
+/home/oleg/CLionProject/simple_RTS/AIScene.h
+
+/home/oleg/CLionProject/simple_RTS/AIScene.h
+InterfaseScene.h
+/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
+AbstractScene.h
+/home/oleg/CLionProject/simple_RTS/AbstractScene.h
+PhisicalScene.h
+/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
+random
+-
+
 /home/oleg/CLionProject/simple_RTS/AbstractScene.cpp
 AbstractScene.h
 /home/oleg/CLionProject/simple_RTS/AbstractScene.h
@@ -660,20 +674,6 @@ iostream
 InterfaseScene.h
 /home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 iterator
--
-
-/home/oleg/CLionProject/simple_RTS/ControllerScene.cpp
-ControllerScene.h
-/home/oleg/CLionProject/simple_RTS/ControllerScene.h
-
-/home/oleg/CLionProject/simple_RTS/ControllerScene.h
-InterfaseScene.h
-/home/oleg/CLionProject/simple_RTS/InterfaseScene.h
-AbstractScene.h
-/home/oleg/CLionProject/simple_RTS/AbstractScene.h
-PhisicalScene.h
-/home/oleg/CLionProject/simple_RTS/PhisicalScene.h
-random
 -
 
 /home/oleg/CLionProject/simple_RTS/DrawScene.cpp
@@ -741,8 +741,8 @@ PhisicalScene.h
 /home/oleg/CLionProject/simple_RTS/PhisicalScene.h
 DrawScene.h
 /home/oleg/CLionProject/simple_RTS/DrawScene.h
-ControllerScene.h
-/home/oleg/CLionProject/simple_RTS/ControllerScene.h
+AIScene.h
+/home/oleg/CLionProject/simple_RTS/AIScene.h
 PleerController.h
 /home/oleg/CLionProject/simple_RTS/PleerController.h
 

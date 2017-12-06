@@ -88,7 +88,6 @@ public:
 };
 
 //штаб, тут только переменная is_alive, которую мы будем устанавливать в обработчике столкновений.
-//TODO: дать пуле атрибут, "наносит урон". Танк ведь не наносит урон при наезде?
 class AbstractHeadquarters: public AbstractObject{
 public:
     bool is_alive;
@@ -148,6 +147,10 @@ public:
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         } else if(type == "HeadquartersBlock") {
             obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1);
+        } else if(type == "Spawner") {
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
+        } else if(type == "Explosion") {
+            obj_list[count_id] = new AbstractObject(count_id, Point{x, y}, 1000);
         }
         return count_id++;
     }
@@ -158,6 +161,13 @@ public:
         for(auto i: obj_list){
             if(i.second->health <= 0){
                 to_remove.push_back(i.first);
+
+                //--on-dead-----
+                if(accord_list[i.first]=="Tank" or accord_list[i.first]=="PleerTank"){
+                    Point point = obj_list[i.first]->get_point();
+                    add_obj(point.x, point.y, "Explosion");
+                }
+                //---циклические зависимости возникают, не получается убрать в объект---
             }
         }
         for(auto i: to_remove) {
@@ -165,7 +175,6 @@ public:
             obj_list.erase(i);
             accord_list.erase(i);
         }
-        std::cout << "удалено\n"<< std::endl;
     }
 
     // функция, возвращающая point объекта по id
@@ -195,6 +204,9 @@ public:
                         break;
                     case '~': //вода
                         this->add_obj(x, y, "WaterBlock");
+                        break;
+                    case 's': //создатель танков
+                        this->add_obj(x, y, "Spawner");
                         break;
                 }
                 x += 24; //3 * 8(px в блоке)
