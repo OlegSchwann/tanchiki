@@ -714,17 +714,23 @@ AbstractScene.h
 SFML/Graphics/Rect.hpp
 -
 
-/home/oleg/CLionProject/simple_RTS/PleerController.cpp
-PleerController.h
-/home/oleg/CLionProject/simple_RTS/PleerController.h
+/home/oleg/CLionProject/simple_RTS/PlayerController.cpp
+PlayerController.h
+/home/oleg/CLionProject/simple_RTS/PlayerController.h
 
-/home/oleg/CLionProject/simple_RTS/PleerController.h
+/home/oleg/CLionProject/simple_RTS/PlayerController.h
 InterfaseScene.h
 /home/oleg/CLionProject/simple_RTS/InterfaseScene.h
 AbstractScene.h
 /home/oleg/CLionProject/simple_RTS/AbstractScene.h
 PhisicalScene.h
 /home/oleg/CLionProject/simple_RTS/PhisicalScene.h
+
+/home/oleg/CLionProject/simple_RTS/SoundScene.cpp
+SoundScene.h
+/home/oleg/CLionProject/simple_RTS/SoundScene.h
+
+/home/oleg/CLionProject/simple_RTS/SoundScene.h
 
 /home/oleg/CLionProject/simple_RTS/main.cpp
 SFML/System/Time.hpp
@@ -743,6 +749,6 @@ DrawScene.h
 /home/oleg/CLionProject/simple_RTS/DrawScene.h
 AIScene.h
 /home/oleg/CLionProject/simple_RTS/AIScene.h
-PleerController.h
-/home/oleg/CLionProject/simple_RTS/PleerController.h
+PlayerController.h
+/home/oleg/CLionProject/simple_RTS/PlayerController.h
 

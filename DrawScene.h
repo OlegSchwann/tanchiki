@@ -201,7 +201,7 @@ private:
 
 // напишем рисующую сцену
 class DrawScene: public InterfaseScene{
-public:
+private:
     //вся картинка
     sf::Image   all_image; //создаем объект Image (изображение)
     sf::Texture all_texture;
@@ -230,7 +230,7 @@ public:
     sf::Sprite  explosion_1;
     sf::Sprite  explosion_2;
     sf::Sprite  explosion_3;
-
+public:
     DrawScene(){
         all_image.loadFromFile("/home/oleg/CLionProject/simple_RTS/60016.png");
         all_texture.loadFromImage(all_image);

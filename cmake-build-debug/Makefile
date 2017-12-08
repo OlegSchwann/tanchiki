@@ -261,32 +261,59 @@ PhisicalScene.cpp.s:
 	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.s
 .PHONY : PhisicalScene.cpp.s
 
-PleerController.o: PleerController.cpp.o
+PlayerController.o: PlayerController.cpp.o
 
-.PHONY : PleerController.o
+.PHONY : PlayerController.o
 
 # target to build an object file
-PleerController.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.o
-.PHONY : PleerController.cpp.o
+PlayerController.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PlayerController.cpp.o
+.PHONY : PlayerController.cpp.o
 
-PleerController.i: PleerController.cpp.i
+PlayerController.i: PlayerController.cpp.i
 
-.PHONY : PleerController.i
+.PHONY : PlayerController.i
 
 # target to preprocess a source file
-PleerController.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.i
-.PHONY : PleerController.cpp.i
+PlayerController.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PlayerController.cpp.i
+.PHONY : PlayerController.cpp.i
 
-PleerController.s: PleerController.cpp.s
+PlayerController.s: PlayerController.cpp.s
 
-.PHONY : PleerController.s
+.PHONY : PlayerController.s
 
 # target to generate assembly for a file
-PleerController.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PleerController.cpp.s
-.PHONY : PleerController.cpp.s
+PlayerController.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/PlayerController.cpp.s
+.PHONY : PlayerController.cpp.s
+
+SoundScene.o: SoundScene.cpp.o
+
+.PHONY : SoundScene.o
+
+# target to build an object file
+SoundScene.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/SoundScene.cpp.o
+.PHONY : SoundScene.cpp.o
+
+SoundScene.i: SoundScene.cpp.i
+
+.PHONY : SoundScene.i
+
+# target to preprocess a source file
+SoundScene.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/SoundScene.cpp.i
+.PHONY : SoundScene.cpp.i
+
+SoundScene.s: SoundScene.cpp.s
+
+.PHONY : SoundScene.s
+
+# target to generate assembly for a file
+SoundScene.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_RTS.dir/build.make CMakeFiles/simple_RTS.dir/SoundScene.cpp.s
+.PHONY : SoundScene.cpp.s
 
 main.o: main.cpp.o
 
@@ -339,9 +366,12 @@ help:
 	@echo "... PhisicalScene.o"
 	@echo "... PhisicalScene.i"
 	@echo "... PhisicalScene.s"
-	@echo "... PleerController.o"
-	@echo "... PleerController.i"
-	@echo "... PleerController.s"
+	@echo "... PlayerController.o"
+	@echo "... PlayerController.i"
+	@echo "... PlayerController.s"
+	@echo "... SoundScene.o"
+	@echo "... SoundScene.i"
+	@echo "... SoundScene.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

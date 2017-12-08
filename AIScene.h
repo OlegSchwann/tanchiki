@@ -64,36 +64,6 @@ public:
 
     };
     ~AITank(){};
-//    void think_about_step(AbstractScene *abstract_scene, PhisicalScene *phisical_scene){
-//        // Пусть будет как в оригинальной игре -
-//        // танк едет вперёд
-//        // с небольшой вероятностью поворачивает в любую сторону
-//        // с небольшой вероятностью стреляет вперёд
-//        // если столкнулся - поворачивает в любую сторону
-//        AbstractObject * abstract_object = abstract_scene->obj_list[id];
-//        AbstrTank *abstract_tank = dynamic_cast<AbstrTank *>(abstract_object);
-//        PhisicalObject * phisical_object = phisical_scene->object_list[id];
-//        PhisicalTank  *phisical_tank = dynamic_cast<PhisicalTank *>(phisical_object);
-//        bool was_collided = phisical_tank->did_collided();
-//        int random_num = std::rand();
-//        bool want_change_direction = random_num < 2147483647*0.05; // RAND_MAX
-//        // Почему у стандартной библиотеки настолько неудобное использование?
-//        if (was_collided || want_change_direction){
-//            int direction = abstract_tank->get_dir();
-//            if(random_num % 2 == 0){
-//                // +1 против часовой стрелки
-//                direction = (direction + 1)%4;
-//            } else{
-//                // -1 по часовой стрелке
-//                direction = (4 + direction - 1)%4;
-//            }
-//            abstract_tank->set_dir(direction);
-//        }
-//        bool want_shoot = random_num > 2147483647*0.95; // RAND_MAX
-//        if (want_shoot){
-//            abstract_scene->create_abctract_bullet(id);
-//        }
-//    };
 
     //код Гриши
     void think_about_step(AbstractScene *abstract_scene, PhisicalScene *phisical_scene){
@@ -203,9 +173,6 @@ public:
         }
     }
 };
-
-
-
 
 class AIScene: public InterfaseScene{
 public:

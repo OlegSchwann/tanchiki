@@ -115,7 +115,7 @@ CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o
  /home/oleg/CLionProject/simple_RTS/InterfaseScene.h
  /home/oleg/CLionProject/simple_RTS/PhisicalScene.cpp
  /home/oleg/CLionProject/simple_RTS/PhisicalScene.h
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o
  ../SFML-2.4.2/include/SFML/Config.hpp
  ../SFML-2.4.2/include/SFML/Graphics/Rect.hpp
  ../SFML-2.4.2/include/SFML/Graphics/Rect.inl
@@ -127,8 +127,11 @@ CMakeFiles/simple_RTS.dir/PleerController.cpp.o
  /home/oleg/CLionProject/simple_RTS/AbstractScene.h
  /home/oleg/CLionProject/simple_RTS/InterfaseScene.h
  /home/oleg/CLionProject/simple_RTS/PhisicalScene.h
- /home/oleg/CLionProject/simple_RTS/PleerController.cpp
- /home/oleg/CLionProject/simple_RTS/PleerController.h
+ /home/oleg/CLionProject/simple_RTS/PlayerController.cpp
+ /home/oleg/CLionProject/simple_RTS/PlayerController.h
+CMakeFiles/simple_RTS.dir/SoundScene.cpp.o
+ /home/oleg/CLionProject/simple_RTS/SoundScene.cpp
+ /home/oleg/CLionProject/simple_RTS/SoundScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o
  ../SFML-2.4.2/include/SFML/Config.hpp
  ../SFML-2.4.2/include/SFML/Graphics.hpp
@@ -206,5 +209,5 @@ CMakeFiles/simple_RTS.dir/main.cpp.o
  /home/oleg/CLionProject/simple_RTS/DrawScene.h
  /home/oleg/CLionProject/simple_RTS/InterfaseScene.h
  /home/oleg/CLionProject/simple_RTS/PhisicalScene.h
- /home/oleg/CLionProject/simple_RTS/PleerController.h
+ /home/oleg/CLionProject/simple_RTS/PlayerController.h
  /home/oleg/CLionProject/simple_RTS/main.cpp

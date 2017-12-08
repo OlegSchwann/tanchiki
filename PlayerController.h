@@ -19,9 +19,9 @@
 // Это не сцена
 
 // класс игрока
-class PleerController {
+class PlayerController {
 public:
-    PleerController():tank_id(-1), // заведомо некорректное значение
+    PlayerController():tank_id(-1), // заведомо некорректное значение
                       pleer_halse(6),
                       direct(UP),
                       since_last_click(30),
@@ -34,12 +34,12 @@ public:
         start_y = y;
     }
 
-    ~PleerController(){};
+    ~PlayerController(){};
     void set_up(){
         direct = UP;
         since_last_click = 0;
     };
-    void set_doun(){
+    void set_down(){
         direct = DOWN;
         since_last_click = 0;
     };

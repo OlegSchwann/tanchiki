@@ -22,7 +22,7 @@
 #include "PhisicalScene.h"
 #include "DrawScene.h"
 #include "AIScene.h"
-#include "PleerController.h"
+#include "PlayerController.h"
 
 // вся графическая подсистема
 // кусочек для теста, пример как пользоваться
@@ -34,20 +34,19 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
 
     AbstractScene abstract_scene;
-    fstream file("1.txt");
+    fstream file("levels/1.txt");
     abstract_scene.load_map(file);
     file.close();
 
     DrawScene draw_scene;
     AIScene ai_scene;
-    PleerController pleer_controller;
-    pleer_controller.set_startXY(16*3*8, 24*3*8);
-    PleerController pleer_controller2;
-    pleer_controller2.set_startXY(8*3*8, 24*3*8);
+    PlayerController playr_controller;
+    playr_controller.set_startXY(16 * 3 * 8, 24 * 3 * 8);
+    PlayerController playr_controller2;
+    playr_controller2.set_startXY(8 * 3 * 8, 24 * 3 * 8);
     PhisicalScene phisical_scene;
     draw_scene.synchronize(&abstract_scene);
     phisical_scene.synchronize(&abstract_scene);
@@ -60,39 +59,39 @@ int main()
 
     sf::Clock clock;
     sf::Event event;
-    while (window.isOpen()){
-        while (window.pollEvent(event)){
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-                pleer_controller.set_doun();
+    while (window.isOpen()) {
+        while (window.pollEvent(event)) {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                playr_controller.set_down();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-                pleer_controller.set_right();
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+                playr_controller.set_right();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-                pleer_controller.set_up();
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                playr_controller.set_up();
             };
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-                pleer_controller.set_left();
+                playr_controller.set_left();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-                pleer_controller.choot(&abstract_scene);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+                playr_controller.choot(&abstract_scene);
                 std::cout << "сделан выстрел" << std::endl;
             };
             //2 игрок
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
-                pleer_controller2.set_doun();
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                playr_controller2.set_down();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-                pleer_controller2.set_right();
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+                playr_controller2.set_right();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
-                pleer_controller2.set_up();
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                playr_controller2.set_up();
             };
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-                pleer_controller2.set_left();
+                playr_controller2.set_left();
             };
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
-                pleer_controller2.choot(&abstract_scene);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+                playr_controller2.choot(&abstract_scene);
                 std::cout << "сделан выстрел" << std::endl;
             };
 
@@ -105,8 +104,8 @@ int main()
         abstract_scene.clear_dead();
         draw_scene.synchronize(&abstract_scene);
         phisical_scene.synchronize(&abstract_scene);
-        pleer_controller.manage_tank(&abstract_scene, &phisical_scene);
-        pleer_controller2.manage_tank(&abstract_scene, &phisical_scene);
+        playr_controller.manage_tank(&abstract_scene, &phisical_scene);
+        playr_controller2.manage_tank(&abstract_scene, &phisical_scene);
         ai_scene.synchronize(&abstract_scene);
         //выводим все спрайты на экран
         window.clear();

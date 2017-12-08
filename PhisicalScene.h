@@ -293,7 +293,7 @@ public:
         } else if(type == "Tank") {
             object_list[id] = new PhisicalTank(id, 15*3, 15*3, 3);
         } else if(type == "PleerTank") {
-            object_list[id] = new PhisicalTank(id, 13*3, 13*3, 3);
+            object_list[id] = new PhisicalTank(id, 13*3, 13*3, 8);
         } else if(type == "Board") {
             //нужен край карты
         } else if(type == "WaterBlock") {

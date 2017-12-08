@@ -116,10 +116,16 @@
 		<Unit filename="/home/oleg/CLionProject/simple_RTS/PhisicalScene.h">
 			<Option target="simple_RTS"/>
 		</Unit>
-		<Unit filename="/home/oleg/CLionProject/simple_RTS/PleerController.cpp">
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/PlayerController.cpp">
 			<Option target="simple_RTS"/>
 		</Unit>
-		<Unit filename="/home/oleg/CLionProject/simple_RTS/PleerController.h">
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/PlayerController.h">
+			<Option target="simple_RTS"/>
+		</Unit>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/SoundScene.cpp">
+			<Option target="simple_RTS"/>
+		</Unit>
+		<Unit filename="/home/oleg/CLionProject/simple_RTS/SoundScene.h">
 			<Option target="simple_RTS"/>
 		</Unit>
 		<Unit filename="/home/oleg/CLionProject/simple_RTS/main.cpp">

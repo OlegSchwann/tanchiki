@@ -115,19 +115,22 @@ CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../InterfaseScene.h
 CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../PhisicalScene.cpp
 CMakeFiles/simple_RTS.dir/PhisicalScene.cpp.o: ../PhisicalScene.h
 
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/Config.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/Graphics/Rect.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/Graphics/Rect.inl
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Clock.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Export.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Time.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Vector2.hpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Vector2.inl
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../AbstractScene.h
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../InterfaseScene.h
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../PhisicalScene.h
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../PleerController.cpp
-CMakeFiles/simple_RTS.dir/PleerController.cpp.o: ../PleerController.h
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/Config.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/Graphics/Rect.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/Graphics/Rect.inl
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Clock.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Export.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Time.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Vector2.hpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../SFML-2.4.2/include/SFML/System/Vector2.inl
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../AbstractScene.h
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../InterfaseScene.h
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../PhisicalScene.h
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../PlayerController.cpp
+CMakeFiles/simple_RTS.dir/PlayerController.cpp.o: ../PlayerController.h
+
+CMakeFiles/simple_RTS.dir/SoundScene.cpp.o: ../SoundScene.cpp
+CMakeFiles/simple_RTS.dir/SoundScene.cpp.o: ../SoundScene.h
 
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../SFML-2.4.2/include/SFML/Config.hpp
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../SFML-2.4.2/include/SFML/Graphics.hpp
@@ -205,6 +208,6 @@ CMakeFiles/simple_RTS.dir/main.cpp.o: ../AbstractScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../DrawScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../InterfaseScene.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../PhisicalScene.h
-CMakeFiles/simple_RTS.dir/main.cpp.o: ../PleerController.h
+CMakeFiles/simple_RTS.dir/main.cpp.o: ../PlayerController.h
 CMakeFiles/simple_RTS.dir/main.cpp.o: ../main.cpp
 
