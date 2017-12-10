@@ -13,4 +13,4 @@ link_libraries(/home/oleg/CLionProject/simple_RTS/SFML-2.4.2/lib)
 
 set(SOURCE_FILES main.cpp DrawScene.cpp DrawScene.h AbstractScene.cpp AbstractScene.h InterfaseScene.cpp InterfaseScene.h PhisicalScene.cpp PhisicalScene.h AIScene.cpp AIScene.h PlayerController.cpp PlayerController.h SoundScene.cpp SoundScene.h)
 add_executable(simple_RTS ${SOURCE_FILES})
-target_link_libraries(simple_RTS sfml-system sfml-graphics sfml-window sfml-network)
+target_link_libraries(simple_RTS sfml-system sfml-graphics sfml-window sfml-network sfml-audio)

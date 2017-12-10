@@ -23,14 +23,7 @@
 #include "DrawScene.h"
 #include "AIScene.h"
 #include "PlayerController.h"
-
-// вся графическая подсистема
-// кусочек для теста, пример как пользоваться
-
-#define DOWN 0
-#define RIGHT 1
-#define UP 2
-#define LEFT 3
+#include "SoundScene.h"
 
 using namespace std;
 
@@ -48,6 +41,8 @@ int main() {
     PlayerController playr_controller2;
     playr_controller2.set_startXY(8 * 3 * 8, 24 * 3 * 8);
     PhisicalScene phisical_scene;
+    SoundScene sound_scene;
+
     draw_scene.synchronize(&abstract_scene);
     phisical_scene.synchronize(&abstract_scene);
     ai_scene.synchronize(&abstract_scene);
@@ -107,6 +102,7 @@ int main() {
         playr_controller.manage_tank(&abstract_scene, &phisical_scene);
         playr_controller2.manage_tank(&abstract_scene, &phisical_scene);
         ai_scene.synchronize(&abstract_scene);
+        sound_scene.synchronize(&abstract_scene);
         //выводим все спрайты на экран
         window.clear();
         draw_scene.draw(window, &abstract_scene);

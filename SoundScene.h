@@ -16,16 +16,21 @@ public:
         InterfaseObject(id), on_creating(on_creating), on_disappearing(on_disappearing){
         while_creating();
     }
-protected:
-    virtual void while_creating(){
-        on_creating->play();
-    };
-    virtual void while_disappearing(){
-        on_disappearing->play();
-    };
     virtual ~SoundObject(){
         while_disappearing();
     };
+protected:
+    virtual void while_creating(){
+        if(on_creating != nullptr){
+            on_creating->play();
+        }
+    };
+    virtual void while_disappearing(){
+        if(on_disappearing != nullptr) {
+            on_disappearing->play();
+        }
+    };
+
     sf::Sound *on_creating;
     sf::Sound *on_disappearing;
 };
@@ -37,79 +42,103 @@ protected:
 class SoundScene: public InterfaseScene{
 private:
     std::unordered_map <int, SoundObject*> object_list;
-    //загрузка звуков в игру
     sf::SoundBuffer background;
-    background.loadFromFile("sounds/background.ogg");
+    sf::Sound background_sound;
     sf::SoundBuffer bonus;
-    bonus.loadFromFile("sounds/bonus.ogg");
+    sf::Sound bonus_sound;
     sf::SoundBuffer brick;
-    brick.loadFromFile("sounds/brick.ogg");
+    sf::Sound brick_sound;
     sf::SoundBuffer explosion;
-    explosion.loadFromFile("sounds/explosion.ogg");
+    sf::Sound explosion_sound;
     sf::SoundBuffer fire;
-    fire.loadFromFile("sounds/fire.ogg");
+    sf::Sound fire_sound;
     sf::SoundBuffer gameover;
-    gameover.loadFromFile("sounds/gameover.ogg");
+    sf::Sound gameover_sound;
     sf::SoundBuffer gamestart;
-    gamestart.loadFromFile("sounds/gamestart.ogg");
+    sf::Sound gamestart_sound;
     sf::SoundBuffer score;
-    score.loadFromFile("sounds/score.ogg");
+    sf::Sound score_sound;
     sf::SoundBuffer steel;
-    steel.loadFromFile("sounds/steel.ogg");
+    sf::Sound steel_sound;
 
 public:
-        DrawScene(){
+    SoundScene(){
+        //загрузка звуков в игру
+        background.loadFromFile("sounds/background.ogg");
+        background_sound.setBuffer(background);
 
-           // "gamestart.ogg"
-        };
+        bonus.loadFromFile("sounds/bonus.ogg");
+        bonus_sound.setBuffer(bonus);
 
-        void add_obj(const int id, const std::string& type){
-            // собираем объекты в зависимости от их типа
-            if(type == "Bullet"){
-                fire;
-            } else if (type == "PleerTank"){
+        brick.loadFromFile("sounds/brick.ogg");
+        brick_sound.setBuffer(brick);
 
-            } else if (type == "HeadquartersBlock") {
-                              gameover;
-            } else if (type == "Tank") {
+        explosion.loadFromFile("sounds/explosion.ogg");
+        explosion_sound.setBuffer(explosion);
 
-            } else if (type == "PleerTank") {
+        fire.loadFromFile("sounds/fire.ogg");
+        fire_sound.setBuffer(fire);
 
-            } else if (type == "Explosion") {
-                              explosion;
-            } else if (type == "DistrBlock") {
-                               brick;
+        gameover.loadFromFile("sounds/gameover.ogg");
+        gameover_sound.setBuffer(gameover);
+
+        gamestart.loadFromFile("sounds/gamestart.ogg");
+        gamestart_sound.setBuffer(gamestart);
+
+        score.loadFromFile("sounds/score.ogg");
+        score_sound.setBuffer(score);
+
+        steel.loadFromFile("sounds/steel.ogg");
+        steel_sound.setBuffer(steel);
+
+        gamestart_sound.play();//при запуске игры.
+    };
+
+    void add_obj(const int id, const std::string& type){
+        // собираем объекты в зависимости от их типа
+        if (type == "DistrBlock") {
+
+        } else if(type == "Bullet"){
+            object_list[id] = new SoundObject(id, &fire_sound, &brick_sound);
+        } else if (type == "PleerTank"){
+            object_list[id] = new SoundObject(id, &score_sound, nullptr);
+        } else if (type == "Tank") {
+
+        } else if (type == "Explosion") {
+            object_list[id] = new SoundObject(id, &explosion_sound, nullptr);
+
+        }
+    }
+
+    void synchronize(AbstractScene *abstract_scene){
+        //забирает измемения из абстрактной сцены и создаёт объекты
+        for(auto i: abstract_scene->obj_list){
+            if(object_list.find(i.first/*id*/) == object_list.end()){
+                //если нет объекта в рисующей схеме
+                //значит его надо создать
+                add_obj(i.first/*id*/, abstract_scene->accord_list[i.first/*id*/]);
             }
         }
-
-        void synchronize(AbstractScene *abstract_scene){
-            //забирает измемения из абстрактной сцены и создаёт объекты
-            for(auto i: abstract_scene->obj_list){
-                if(object_list.find(i.first/*id*/) == object_list.end()){
-                    //если нет объекта в рисующей схеме
-                    //значит его надо создать
-                    add_obj(i.first/*id*/, abstract_scene->accord_list[i.first/*id*/]);
-                }
+        //сверяет изменения с абстрактной сценой и удаляет объекты
+        std::vector<int> to_remove;
+        for(auto i: this->object_list) {
+            if (abstract_scene->obj_list.find(i.first/*id*/) ==
+                abstract_scene->obj_list.end()) {
+                //если нет объекта в абстрактной сцене
+                //значит его надо удалить и из нашей сцены
+                delete i.second;
+                to_remove.push_back(i.first);
             }
-            //сверяет изменения с абстрактной сценой и удаляет объекты
-            std::vector<int> to_remove;
-            for(auto i: this->object_list) {
-                if (abstract_scene->obj_list.find(i.first/*id*/) ==
-                    abstract_scene->obj_list.end()) {
-                    //если нет объекта в абстрактной сцене
-                    //значит его надо удалить и из нашей сцены
-                    to_remove.push_back(i.first);
-                }
-            }
-            for (auto i : to_remove) {
-                object_list.erase(i);
-            }
-        };
-
-        ~SoundScene(){
-            //всё статическое, и удалится само.
-        };
+        }
+        for (auto i : to_remove) {
+            object_list.erase(i);
+        }
     };
+
+    ~SoundScene(){
+        //всё статическое, и удалится само.
+    };
+};
 
 
 #endif //SIMPLE_RTS_SOUNDSCENE_H

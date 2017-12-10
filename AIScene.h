@@ -210,6 +210,7 @@ public:
                abstract_scene->obj_list.end()){
                 //если нет объекта в абстрактной сцене
                 //значит его надо удалить и из нашей сцены
+                delete i.second;
                 to_remove.push_back(i.first);
             }
         }
